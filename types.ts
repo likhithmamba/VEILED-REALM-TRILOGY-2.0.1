@@ -35,6 +35,8 @@ export interface Character {
   name: string;
   role: string;
   quote: string;
+  shortQuote?: string;
+  books?: string;
 }
 
 export interface Download {

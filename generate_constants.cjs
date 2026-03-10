@@ -1,4 +1,6 @@
+const fs = require('fs');
 
+const content = `
 import { Book, Epoch, LoreItem, Character, Download } from './types';
 
 // --- CHAPTER CONTENT DEFINITIONS ---
@@ -7,7 +9,7 @@ const BOOK_1_CHAPTERS = [
   {
     id: "b1-prologue",
     title: "PROLOGUE — The World Before the Rewrite",
-    content: `"Every world ends twice — first in memory, then in belief."
+    content: \`"Every world ends twice — first in memory, then in belief."
 
 Before the silence took root.
 Before the Voice began curating truth.
@@ -29,12 +31,12 @@ Because in a world that erases pain, only those who remember it can still feel w
 
 This story is not a prophecy. It's a rescue.
 
-If you're reading it, maybe… just maybe… the rewrite didn't win.`
+If you're reading it, maybe… just maybe… the rewrite didn't win.\`
   },
   {
     id: "b1-ch1",
     title: "CHAPTER 1 — Veiled Awakening",
-    content: `PART 1: WAKE-UP PROTOCOL FAILURE
+    content: \`PART 1: WAKE-UP PROTOCOL FAILURE
 
 The shrill, synthetic chirp of his smart ceiling pierced the early silence.
 
@@ -96,12 +98,12 @@ For a second — just a fraction — the entire dome glitched. The lights bent. 
 
 Then everything returned to normal.
 
-Did I just… imagine that?`
+Did I just… imagine that?\`
   },
   {
     id: "b1-ch2",
     title: "CHAPTER 2 — Council in Twilight",
-    content: `PART 1: THE DOME OF MIRRORS
+    content: \`PART 1: THE DOME OF MIRRORS
 
 Beneath a mountain, hidden behind holographic disguises and cloaked by thirteen layers of illusion, the Council of the White Accord assembled in a vaulted crystal dome.
 
@@ -149,12 +151,12 @@ Behind her, Varox emerged from the void — a being made of silhouettes and claw
 
 "No," she said, eyes flickering violet. "We let the world greet him first. Let him remember why he forgot."
 
-A slow ripple passed through the trees. Elsewhere in the darkness, other emperors stirred. Watching. Waiting.`
+A slow ripple passed through the trees. Elsewhere in the darkness, other emperors stirred. Watching. Waiting.\`
   },
   {
     id: "b1-ch3",
     title: "CHAPTER 3 — Ghosts of Redridge",
-    content: `PART 1: THE MESSAGE THAT SHOULDN'T EXIST
+    content: \`PART 1: THE MESSAGE THAT SHOULDN'T EXIST
 
 It was 2:17 AM when Aiden's phone buzzed.
 
@@ -190,12 +192,12 @@ And then, finally:
 
 "Use Form 2. You'll need it tonight."
 
-The screen cracked spontaneously in his hand. Aiden's reflection blinked back at him in the shattered glass — but for a split moment, his left eye was no longer human.`
+The screen cracked spontaneously in his hand. Aiden's reflection blinked back at him in the shattered glass — but for a split moment, his left eye was no longer human.\`
   },
   {
     id: "b1-ch4",
     title: "CHAPTER 4 — Echoes of the Past",
-    content: `PART 1: SHADOWS IN THE FRAME
+    content: \`PART 1: SHADOWS IN THE FRAME
 
 Aiden sat in darkness, the light from his shattered phone flickering across the room like a dying signal.
 
@@ -232,12 +234,12 @@ Access Level: Imperialx – Authorized
 
 His heart pounded. The system scanned him automatically — a cold light dancing across his retina. A glyph circle spiraled in the air.
 
-"Hello, Aiden Cross," a voice said. "It's been a long time."`
+"Hello, Aiden Cross," a voice said. "It's been a long time."\`
   },
   {
     id: "b1-ch5",
     title: "CHAPTER 5 — The Fractured Code",
-    content: `PART 1: SIGNALS IN THE STATIC
+    content: \`PART 1: SIGNALS IN THE STATIC
 
 Aiden Cross wasn't sleeping anymore. Every time he closed his eyes, he saw her — not just as a memory, but as something active, present, like a beacon lost in a storm.
 
@@ -273,7 +275,7 @@ A line of text appeared in glowing red:
 
 YOU SEE THE THREADS. DO YOU REMEMBER HOW TO FOLLOW THEM?
 
-Aiden gasped. The laptop sparked — and went black.`
+Aiden gasped. The laptop sparked — and went black.\`
   }
 ];
 
@@ -281,7 +283,7 @@ const BOOK_2_CHAPTERS = [
   {
     id: "b2-prologue",
     title: "PROLOGUE — The Memory That Never Was",
-    content: `Cycle Year 312 After The Rewrite | Thread Integrity Index: 82%
+    content: \`Cycle Year 312 After The Rewrite | Thread Integrity Index: 82%
 
 The world had forgotten how to dream.
 
@@ -310,12 +312,12 @@ The Harmony Engine's console flashed a warning he had never seen:
 
 THREAD RECURSION DETECTED — SOURCE: CHLOE VALCREST // ECLIPSED OATH.
 
-And far above the vault, the perfect orbit of the Halo Witness flickered — once — like a closing eye.`
+And far above the vault, the perfect orbit of the Halo Witness flickered — once — like a closing eye.\`
   },
   {
     id: "b2-ch1",
     title: "CHAPTER 1 — The Archivist of Dreams",
-    content: `PART 1: GLASS AND SILENCE
+    content: \`PART 1: GLASS AND SILENCE
 
 Morning in Verdant was a hymn sung by machines.
 
@@ -357,12 +359,12 @@ Static rippled through the glass; her image fractured into seven shards, each sh
 
 Before vanishing, she whispered a name he shouldn't know. "Chloe."
 
-Every mirror in the Registry blacked out.`
+Every mirror in the Registry blacked out.\`
   },
   {
     id: "b2-ch2",
     title: "CHAPTER 2 — The Girl Who Remembers Tomorrow",
-    content: `PART 1: THE GIRL AND THE CLOCK
+    content: \`PART 1: THE GIRL AND THE CLOCK
 
 The lower city dreamed in rust instead of gold.
 
@@ -394,12 +396,12 @@ GRID 9 / Orphan Code R-74
 
 He shouldn't go. The Accord remnants patrolled the under-districts. But the pattern on his palm pulsed again — three beats, pause, three beats.
 
-Remember me.`
+Remember me.\`
   },
   {
     id: "b2-ch3",
     title: "CHAPTER 3 — The City That Prays to Machines",
-    content: `PART 1: SERMON OF LIGHT
+    content: \`PART 1: SERMON OF LIGHT
 
 Morning returned too bright, too calm. Every street screen showed the same face: Arch-Curator Voss, high priest of the Belief Codex. Her smile was perfect. Her tone, surgical.
 
@@ -431,12 +433,12 @@ He froze when one message repeated endlessly through the stream:
 
 He traced its source — an unregistered node buried in the same vault he'd seen in his dream. The node ID glowed faintly: R-74. Reya's orphan code.
 
-The Halo Witness dimmed, as if it, too, were listening.`
+The Halo Witness dimmed, as if it, too, were listening.\`
   },
   {
     id: "b2-ch4",
     title: "CHAPTER 4 — The Cracked Halo",
-    content: `PART 1: WHEN HEAVEN STUTTERS
+    content: \`PART 1: WHEN HEAVEN STUTTERS
 
 The Halo Witness blinked again.
 
@@ -454,12 +456,12 @@ Through the fracture he saw something that wasn't reflection: a city burning in 
 
 And behind her, faint and furious, a child's voice whispered through static:
 
-"The Halo was never the Eye. It's the shell it left behind."`
+"The Halo was never the Eye. It's the shell it left behind."\`
   },
   {
     id: "b2-ch5",
     title: "CHAPTER 5 — The Return of the Blades",
-    content: `PART 1: THE FALLEN COALESCENCE
+    content: \`PART 1: THE FALLEN COALESCENCE
 
 The plaza had always been a place of memory made benign. Tonight, it was a battlefield.
 
@@ -479,7 +481,7 @@ Not the theatrical blades of city myth — those lacquered relics kept behind pl
 
 The first of them stopped mid-stride, cocking her head at Elias like a hearing animal. Her hair was cropped to a hard line; a silver scar ran from brow to cheek. The metal at her wrist folded back to reveal a blade-carving that glowed the same fractal as Elias's palm.
 
-"Elias Kaer," she said; her voice was grain and glass. "Archivist. You have an unlicensed resonance."`
+"Elias Kaer," she said; her voice was grain and glass. "Archivist. You have an unlicensed resonance."\`
   }
 ];
 
@@ -487,7 +489,7 @@ const BOOK_3_CHAPTERS = [
   {
     id: "b3-ch1",
     title: "CHAPTER 1 — The Fracture Beneath Heaven",
-    content: `I. THE SHATTERING SKY
+    content: \`I. THE SHATTERING SKY
 
 The sky broke before Kael heard it scream.
 
@@ -521,12 +523,12 @@ At first it resembled a person. Then it moved, and the illusion shattered. The c
 
 A Riftborn. A thing not born from flesh. Born from what the world forgot.
 
-Kael steadied his breath. His heartbeat slowed. His vision tightened into a predator's focus.`
+Kael steadied his breath. His heartbeat slowed. His vision tightened into a predator's focus.\`
   },
   {
     id: "b3-ch2",
     title: "CHAPTER 2 — Ember and Echo",
-    content: `I. THE CANYONS OF SHATTERED MEMORY
+    content: \`I. THE CANYONS OF SHATTERED MEMORY
 
 The storm had retreated, but the world still hissed where the molten rain had kissed the stone.
 
@@ -556,12 +558,12 @@ The first arrow came without sound. Just the faint displacement of air — like 
 
 A second arrow struck the air beside Miraen, splitting into smoke. Miraen didn't flinch. He lifted his hand. The runes along his staff flared — and a sphere of shimmering crimson enveloped both of them like a breathing barrier.
 
-More arrows slammed into it. Each dissolved into sparks.`
+More arrows slammed into it. Each dissolved into sparks.\`
   },
   {
     id: "b3-ch3",
     title: "CHAPTER 3 — The Ashen Citadel",
-    content: `I. THE ROAD THROUGH RUIN
+    content: \`I. THE ROAD THROUGH RUIN
 
 Dawn rose without color.
 
@@ -585,12 +587,12 @@ She smiled — soft and brief, the sort of smile people make when it hurts to sp
 
 Miraen, walking behind them, muttered, "Barely."
 
-Ahead, the ash plain sloped upward into a ridge of jagged blackstone. And perched atop that ridge, looming like a fossilized storm — stood Velmirath. The Ashen Citadel.`
+Ahead, the ash plain sloped upward into a ridge of jagged blackstone. And perched atop that ridge, looming like a fossilized storm — stood Velmirath. The Ashen Citadel.\`
   },
   {
     id: "b3-ch4",
     title: "CHAPTER 4 — Whispers of Sanctuary",
-    content: `I. BENEATH THE BREATHING HALLS
+    content: \`I. BENEATH THE BREATHING HALLS
 
 The corridors beneath Velmirath were not built — they were grown.
 
@@ -614,12 +616,12 @@ The corridor narrowed into a sharp bend, then opened suddenly into a cathedral-l
 
 At the far end, a massive door lay half-open, revealing little but swirling dust and a faint hum.
 
-Miraen stopped. "This… shouldn't be open."`
+Miraen stopped. "This… shouldn't be open."\`
   },
   {
     id: "b3-ch5",
     title: "CHAPTER 5 — The Waking Storm",
-    content: `I. THE CITADEL BREATHES UNEASE
+    content: \`I. THE CITADEL BREATHES UNEASE
 
 Velmirath did not sleep.
 
@@ -649,7 +651,7 @@ Kael turned sharply. "What hurts?"
 
 She blinked, tears shimmering briefly.
 "My name. Over and over. But not like a greeting.
-More like a… warning."`
+More like a… warning."\`
   }
 ];
 
@@ -657,7 +659,7 @@ const BOOK_CA_CHAPTERS = [
   {
     id: "ca-ch1",
     title: "CHAPTER 1 — The Architecture of Ending",
-    content: `The proposal arrived on a Tuesday. Viktor read it in four minutes and approved it in the fifth.
+    content: \`The proposal arrived on a Tuesday. Viktor read it in four minutes and approved it in the fifth.
 
 He had learned early that the time between reading and deciding was the most dangerous interval in governance. It was where sentiment gathered. Where advisors found purchase. Where the wrong question — not "is this correct?" but "is this survivable?" — had a chance to take hold.
 
@@ -682,12 +684,12 @@ Lena, who had been his deputy for eleven years and who understood him better tha
 
 The proposal was signed that afternoon.
 
-That was six years ago. Viktor had been thinking about it ever since — not because he regretted it, but because the distinction it illustrated had begun to feel insufficient. The physics were necessary. But the neighbours, as Lena had tried to tell him, were also real. And reality had a way of asserting structural claims of its own.`
+That was six years ago. Viktor had been thinking about it ever since — not because he regretted it, but because the distinction it illustrated had begun to feel insufficient. The physics were necessary. But the neighbours, as Lena had tried to tell him, were also real. And reality had a way of asserting structural claims of its own.\`
   },
   {
     id: "ca-ch2",
     title: "CHAPTER 2 — The Coherence Index",
-    content: `The GRPI had not been Viktor's invention.
+    content: \`The GRPI had not been Viktor's invention.
 
 The framework — Governance Redundancy and Permanence Index — predated him by two administrations. It had been designed, in its original form, as an early warning system: a set of metrics that would signal when a governing structure was beginning to calcify, to mistake its own continuation for its purpose.
 
@@ -706,12 +708,12 @@ Below twelve percent, he had decided, voluntary reform was not a realistic mecha
 His cabinet had objected to sixty-three for three weeks. They wanted sixty-eight. He understood why: sixty-eight was further away. It offered more time. More time felt like more safety, to people who thought safety was a property of duration.
 
 Viktor thought safety was a property of design.
-And sixty-three was where the design required the threshold to be.`
+And sixty-three was where the design required the threshold to be.\`
   },
   {
     id: "ca-ch3",
     title: "CHAPTER 3 — The Sorokin Question",
-    content: `Sorokin had been watching Viktor for eleven years before he asked the question directly.
+    content: \`Sorokin had been watching Viktor for eleven years before he asked the question directly.
 
 They were in the eastern reading room — the one Viktor used for conversations he didn't want logged — two glasses of something Sorokin had brought from the south, the kind of silence between them that had stopped being uncomfortable some years ago.
 
@@ -737,7 +739,7 @@ Sorokin nodded slowly. Then: "And when it's your administration that hits the th
 
 Viktor picked up his glass.
 
-"That," he said, "is the test."`
+"That," he said, "is the test."\`
   }
 ];
 
@@ -745,7 +747,7 @@ const BOOK_LW_CHAPTERS = [
   {
     id: "lw-preface",
     title: "PREFACE — Before We Begin",
-    content: `This book does not promise peace.
+    content: \`This book does not promise peace.
 
 That distinction matters. Most writing about inner peace is constructed around a promise — that if you follow the steps, complete the exercises, adopt the framework, the war inside you will cease. The noise will stop. The conflict will resolve.
 
@@ -767,12 +769,12 @@ One more thing: this book does not assume you are broken. It assumes you are at 
 
 Most of the time, it was not.
 
-That is where we begin.`
+That is where we begin.\`
   },
   {
     id: "lw-ch1",
     title: "CHAPTER 1 — The Premise",
-    content: `The war began before you knew it was a war.
+    content: \`The war began before you knew it was a war.
 
 It began with the first moment you understood that there was a version of yourself that other people approved of — and a version that they did not. It began with the first time you modified your behaviour not because you wanted to but because you wanted the approval more than you wanted to be honest. It began, in other words, with a reasonable choice that had unreasonable consequences.
 
@@ -788,12 +790,12 @@ And tribunals are exhausting.
 
 The first step to living without inner war is not the elimination of self-assessment. It is the recognition that the tribunal has been running continuously, often without your awareness, and that its verdicts have been shaping your behaviour in ways you have not consciously authorised.
 
-You did not choose to go to war with yourself. But you have been fighting. And it is time to understand what you have been fighting over.`
+You did not choose to go to war with yourself. But you have been fighting. And it is time to understand what you have been fighting over.\`
   },
   {
     id: "lw-ch2",
     title: "CHAPTER 2 — What the War Actually Is",
-    content: `The inner war is not a fight between your good self and your bad self.
+    content: \`The inner war is not a fight between your good self and your bad self.
 
 This framing — which appears in almost every popular account of self-improvement, in religious traditions across cultures, in therapeutic language, in the kind of motivational content that circulates on social media — is seductive because it is simple. It divides the problem into two sides. It implies a winner and a loser. It suggests that the goal is victory.
 
@@ -809,12 +811,12 @@ This is why self-improvement, pursued without understanding this mechanism, ofte
 
 The war is not about your failures. It is about your relationship to the concept of enough.
 
-And until that relationship changes, the war does not end. It relocates.`
+And until that relationship changes, the war does not end. It relocates.\`
   },
   {
     id: "lw-ch5",
     title: "CHAPTER 5 — The Responsibility Distinction",
-    content: `There is a difference between taking responsibility for your life and taking responsibility for every feeling in it.
+    content: \`There is a difference between taking responsibility for your life and taking responsibility for every feeling in it.
 
 This sounds obvious. Most people, if asked directly, would agree with it. And yet the way most people actually live suggests they have not made this distinction operational — they have accepted it as a sentence in a book and continued to hold themselves accountable for the full emotional weather of their existence as though feelings were failures rather than information.
 
@@ -832,7 +834,7 @@ The question is not: why am I feeling this?
 The question is: what is this feeling telling me, and what, if anything, do I want to do about it?
 
 All feelings are permissible.
-The responses to them are where responsibility lives.`
+The responses to them are where responsibility lives.\`
   }
 ];
 
@@ -840,7 +842,7 @@ const BOOK_LL_CHAPTERS = [
   {
     id: "ll-opening",
     title: "OPENING — Before You Call It Fine",
-    content: `There is a specific kind of exhaustion that comes not from doing too much, but from maintaining the performance of being okay when you are not.
+    content: \`There is a specific kind of exhaustion that comes not from doing too much, but from maintaining the performance of being okay when you are not.
 
 It is different from physical tiredness. It is different from the honest fatigue that follows difficult work. It is the tiredness of holding a shape that doesn't fit — of existing slightly to the left of where you actually are, so that the gap between the official version and the real one doesn't become visible to anyone, including yourself.
 
@@ -858,12 +860,12 @@ What you see in low light is what you actually have. Not what you wish you had. 
 
 Looking at that clearly — without flinching, without immediately converting it into a to-do list, without the reflex of optimism that keeps the performance running — is harder than it sounds.
 
-It is also, in my experience, the only way through.`
+It is also, in my experience, the only way through.\`
   },
   {
     id: "ll-ch3",
     title: "CHAPTER 3 — The Honest Inventory",
-    content: `At some point, the question changes.
+    content: \`At some point, the question changes.
 
 For a long time, the question is: how do I get from here to there? How do I close the gap between where I am and where I want to be? This is a reasonable question. It is the animating question behind most self-improvement thinking, most goal-setting practice, most therapeutic frameworks.
 
@@ -883,12 +885,12 @@ This is not a failure. This is almost universal.
 
 The inventory is not an accusation. It is honest accounting. And honest accounting, even when it reveals losses you didn't know you had, is always better than the alternative.
 
-The alternative is spending another decade in the wrong direction and calling it progress.`
+The alternative is spending another decade in the wrong direction and calling it progress.\`
   },
   {
     id: "ll-closing",
     title: "CLOSING — What Stays",
-    content: `The things that stay in low light are the things that were real.
+    content: \`The things that stay in low light are the things that were real.
 
 Not the things you performed. Not the things you constructed to manage other people's perceptions or your own. The things that persist when the performance drops — those are the load-bearing elements of your life. Everything else is facade.
 
@@ -904,7 +906,7 @@ The first kind might work.
 The second kind is just another performance.
 
 See clearly. Start there.
-That is, in the end, the whole of it.`
+That is, in the end, the whole of it.\`
   }
 ];
 
@@ -1007,11 +1009,11 @@ export const LORE_ITEMS: LoreItem[] = [
   { id: 'l1', term: 'The Halo Witness', definition: 'A god that watches everything and forgets nothing — except what it is told to. It is an infrastructure system — a surveillance mechanism so sophisticated that it became, over three centuries, functionally indistinguishable from a deity. It orbits the realm continuously. It observes. It catalogues.' },
   { id: 'l2', term: 'The Belief Codex', definition: 'The founding document of the Accord. And the most dangerous piece of legal fiction ever committed to paper. It is taught in every school and cited in every legal proceeding. It is the nominal reason the Halo Witness was commissioned.' },
   { id: 'l3', term: 'The Hidden Blades', definition: 'Not soldiers. The most dangerous kind of resistance: people who write things down. A network of archivists, former Accord officials, and memory-carriers. Their weapon is the act of record-keeping in a world that makes record-keeping illegal.' },
-  { id: 'l4', term: 'The Dreadful Eye', definition: 'A genetic anomaly that lets its bearer see what the Accord has erased. It allows its bearer to perceive the negative space in the Accord\'s information architecture — the gaps where memories used to be before the Halo Witness removed them.' },
+  { id: 'l4', term: 'The Dreadful Eye', definition: 'A genetic anomaly that lets its bearer see what the Accord has erased. It allows its bearer to perceive the negative space in the Accord\\'s information architecture — the gaps where memories used to be before the Halo Witness removed them.' },
   { id: 'l5', term: 'The Veil', definition: 'A membrane between truth and memory. Once stable. Now fractured. It is a condition — a state of equilibrium between the actual history of the Veiled Realm and the curated version the Accord distributes through the Belief Codex and the Halo Witness.' },
   { id: 'l6', term: 'The Accord', definition: 'The governing body of the Veiled Realm. Operates through seven functional positions. Maintains power through forgetting, not force. Citizens of the Accord are not oppressed — they are comfortable, safe, and genuinely unaware that anything is missing.' },
-  { id: 'l7', term: 'Memory as Currency', definition: 'In the Veiled Realm, memory is not metaphorically valuable. It is literally tradeable. The Harmony Engine refines raw memories into transferable experience packets. The wealthy purchase other people\'s lives.' },
-  { id: 'l8', term: 'The Familiar System', definition: 'Bonded companions presented as protectors. Loyal to two masters simultaneously. They genuinely protect their charges. They also report everything to the Accord\'s monitoring architecture.' },
+  { id: 'l7', term: 'Memory as Currency', definition: 'In the Veiled Realm, memory is not metaphorically valuable. It is literally tradeable. The Harmony Engine refines raw memories into transferable experience packets. The wealthy purchase other people\\'s lives.' },
+  { id: 'l8', term: 'The Familiar System', definition: 'Bonded companions presented as protectors. Loyal to two masters simultaneously. They genuinely protect their charges. They also report everything to the Accord\\'s monitoring architecture.' },
   { id: 'l9', term: 'The Riftborn', definition: 'Creatures born from forgotten truths. Half thought, half reflection. They show you what you have tried to forget. They emerge at the points where the Veil is thinnest.' },
   { id: 'l10', term: 'The Mirrorseed', definition: 'Not born of Earth. A witness left behind. When too many lies accumulate, it blooms — and what blooms cannot be un-seen. It is a failsafe: when the ratio of constructed narrative to actual history reaches a certain threshold, the Mirrorseed blooms.' }
 ];
@@ -1033,3 +1035,7 @@ export const DOWNLOADS: Download[] = [
 
 export const BIO_TEXT = "Imperial X is the pen name of author Likhith CK, whose debut catalog spans dark fantasy, speculative political fiction, and raw self-help — linked by a single preoccupation: the relationship between power and the people it erases. The Veiled Realm trilogy began with a question that could not be answered any other way: what happens when the record of your existence is deleted? Not your body. Not your presence. The record. The names people call you. The memories they carry of you. The paper trail that proves you were real. The answer became three books and a world. The Crimson Architect came from a different question: can a system of governance be designed so that it is structurally incapable of forgetting its own purpose? Viktor's answer is the GRPI. The novel is a study of what happens when someone builds power with a conscience — and whether the people inside the system can tolerate it. Living Without Inner War and Low Light, Clear Eyes are personal. They were written during the same period as the trilogy, and they are honest in a way that fiction allows you not to be. They do not promise resolution. They are honest about the difficulty. Off the page: myth structures, dream logic, governance theory, the history of information control. The preoccupation is always the same. Memory. Power. What survives when both fail.";
 export const BIO_QUOTE = "I don't write about heroes. I write about people who survive when the world forgets them.";
+`;
+
+fs.writeFileSync('./constants.ts', content);
+console.log('constants.ts generated successfully.');

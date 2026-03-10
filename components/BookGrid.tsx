@@ -17,7 +17,7 @@ export const BookGrid: React.FC<BookGridProps> = ({ onBookSelect }) => {
   }, []);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-16 lg:gap-24 max-w-7xl mx-auto px-6 place-items-center">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 lg:gap-24 max-w-7xl mx-auto px-6 place-items-center">
       {BOOKS.map((book, idx) => (
         <div 
           key={book.id} 

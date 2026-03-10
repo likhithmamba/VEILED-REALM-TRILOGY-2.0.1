@@ -98,7 +98,7 @@ export const GrimoireModal: React.FC<GrimoireModalProps> = ({ book, onClose }) =
         <div className="hidden md:flex w-72 flex-col border-r border-white/5 bg-[#0a0a0a]/40 backdrop-blur-xl relative z-20">
           <div className="p-8 pb-4">
             <span className="text-crimson font-cinzel text-[10px] tracking-[0.3em] uppercase block mb-2 opacity-80">
-              Veiled Realm
+              IMPERIALX
             </span>
             <h1 className="text-xl font-display text-white italic leading-tight">
               {book.title}
@@ -216,7 +216,7 @@ export const GrimoireModal: React.FC<GrimoireModalProps> = ({ book, onClose }) =
                       return (
                         <div key={chapter.id} id={chapter.id} className="min-h-[50vh] flex flex-col items-center justify-center text-center my-12 relative group">
                            <div className="absolute inset-0 bg-gradient-to-b from-crimson/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
-                           <span className="font-cinzel text-red-500 text-sm tracking-[0.5em] uppercase mb-6 relative z-10">Part of the Trilogy</span>
+                           <span className="font-cinzel text-red-500 text-sm tracking-[0.5em] uppercase mb-6 relative z-10">Part of the Catalog</span>
                            <h2 className="text-6xl md:text-8xl font-display text-white relative z-10 drop-shadow-2xl">
                              {chapter.title}
                            </h2>
@@ -267,7 +267,7 @@ export const GrimoireModal: React.FC<GrimoireModalProps> = ({ book, onClose }) =
                       <BookOpen className="w-8 h-8 text-yellow-500 mx-auto mb-6 opacity-80" />
                       <h4 className="text-2xl font-display text-white mb-4">The Story Continues</h4>
                       <p className="text-gray-300 font-reading mb-8">
-                         The threads of fate are not yet cut. Secure the complete trilogy to witness the end.
+                         The threads of fate are not yet cut. Secure the complete edition to witness the end.
                       </p>
                       <button className="px-10 py-4 bg-white text-black font-cinzel font-bold tracking-[0.2em] text-xs hover:bg-yellow-400 transition-colors shadow-[0_0_30px_rgba(255,255,255,0.1)]">
                          PURCHASE FULL EDITION

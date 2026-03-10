@@ -1,1 +1,0 @@
-error: invalid path 'migrated_prompt_history/prompt_2025-12-17T19:50:27.112Z.json'

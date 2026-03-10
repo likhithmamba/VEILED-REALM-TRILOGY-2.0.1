@@ -77,38 +77,76 @@ export const LoreSection: React.FC = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-4xl md:text-5xl font-cinzel text-gold mb-4 tracking-[0.15em]">GLOSSARY OF THE REALM</h2>
+          <h2 className="text-4xl md:text-5xl font-cinzel text-gold mb-4 tracking-[0.15em]">A World Built on Forgetting</h2>
           <div className="w-24 h-[1px] bg-red-800 mx-auto mb-6 shadow-[0_0_10px_#991b1b]"></div>
           <p className="text-gray-400 font-montserrat text-sm uppercase tracking-[0.3em] font-bold">Tap a Thread to Expand Reality</p>
+          <span className="inline-block mt-4 px-3 py-1 bg-red-900/20 border border-red-900/50 text-red-500 text-[10px] font-cinzel tracking-widest uppercase rounded-sm">
+            Veiled Realm Trilogy
+          </span>
         </div>
         
-        <div className={`flex flex-col md:flex-row w-full min-h-[500px] md:h-[600px] gap-2 p-2 bg-white/[0.02] border border-white/5 rounded-sm transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-          {LORE_ITEMS.map((item) => (
-            <div 
-              key={item.id}
-              className="group flex-1 min-w-0 md:hover:flex-[4] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] cursor-pointer relative border border-crimson/10 bg-[#080508]/80 hover:bg-[#0c080c] hover:border-crimson/40 overflow-hidden flex items-center justify-center p-6"
-            >
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                 <span className="md:rotate-[-90deg] whitespace-nowrap transition-all duration-700 uppercase tracking-[0.4em] font-cinzel text-gray-500 group-hover:text-gold group-hover:opacity-0 group-hover:scale-150 text-sm md:text-lg">
-                    {item.term}
-                 </span>
+        <div className="space-y-4">
+          <div className={`flex flex-col md:flex-row w-full min-h-[400px] md:h-[500px] gap-2 p-2 bg-white/[0.02] border border-white/5 rounded-sm transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+            {LORE_ITEMS.slice(0, 5).map((item) => (
+              <div 
+                key={item.id}
+                className="group flex-1 min-w-0 md:hover:flex-[4] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] cursor-pointer relative border border-crimson/10 bg-[#080508]/80 hover:bg-[#0c080c] hover:border-crimson/40 overflow-hidden flex items-center justify-center p-6"
+              >
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                   <span className="md:rotate-[-90deg] whitespace-nowrap transition-all duration-700 uppercase tracking-[0.4em] font-cinzel text-gray-500 group-hover:text-gold group-hover:opacity-0 group-hover:scale-150 text-sm md:text-lg">
+                      {item.term}
+                   </span>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-b from-crimson/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                <div className="opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-150 transform translate-y-10 group-hover:translate-y-0 flex flex-col items-center text-center max-w-lg">
+                   <div className="mb-8 text-gold drop-shadow-[0_0_15px_rgba(202,138,4,0.4)]">
+                      {getIcon(item.term)}
+                   </div>
+                   <h3 className="text-2xl md:text-4xl font-cinzel text-white mb-6 tracking-widest">{item.term}</h3>
+                   <div className="w-12 h-[1px] bg-crimson/50 mb-8" />
+                   <div className="h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-700 delay-100 overflow-hidden">
+                     <p className="text-gray-200 font-reading text-sm md:text-base leading-relaxed italic px-4">
+                        {item.definition}
+                     </p>
+                   </div>
+                   <div className="mt-12 w-2 h-2 bg-crimson rotate-45 shadow-[0_0_10px_#991b1b]" />
+                </div>
+                <div className="absolute top-4 right-4 w-4 h-4 border-t border-r border-white/10 group-hover:border-gold/50 transition-all duration-500" />
+                <div className="absolute bottom-4 left-4 w-4 h-4 border-b border-l border-white/10 group-hover:border-gold/50 transition-all duration-500" />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-b from-crimson/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-              <div className="opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-150 transform translate-y-10 group-hover:translate-y-0 flex flex-col items-center text-center max-w-lg">
-                 <div className="mb-8 text-gold drop-shadow-[0_0_15px_rgba(202,138,4,0.4)]">
-                    {getIcon(item.term)}
-                 </div>
-                 <h3 className="text-2xl md:text-4xl font-cinzel text-white mb-6 tracking-widest">{item.term}</h3>
-                 <div className="w-12 h-[1px] bg-crimson/50 mb-8" />
-                 <p className="text-gray-200 font-reading text-lg md:text-xl leading-relaxed italic px-4">
-                    {item.definition}
-                 </p>
-                 <div className="mt-12 w-2 h-2 bg-crimson rotate-45 shadow-[0_0_10px_#991b1b]" />
+            ))}
+          </div>
+
+          <div className={`flex flex-col md:flex-row w-full min-h-[400px] md:h-[500px] gap-2 p-2 bg-white/[0.02] border border-white/5 rounded-sm transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+            {LORE_ITEMS.slice(5, 10).map((item) => (
+              <div 
+                key={item.id}
+                className="group flex-1 min-w-0 md:hover:flex-[4] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] cursor-pointer relative border border-crimson/10 bg-[#080508]/80 hover:bg-[#0c080c] hover:border-crimson/40 overflow-hidden flex items-center justify-center p-6"
+              >
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                   <span className="md:rotate-[-90deg] whitespace-nowrap transition-all duration-700 uppercase tracking-[0.4em] font-cinzel text-gray-500 group-hover:text-gold group-hover:opacity-0 group-hover:scale-150 text-sm md:text-lg">
+                      {item.term}
+                   </span>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-b from-crimson/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                <div className="opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-150 transform translate-y-10 group-hover:translate-y-0 flex flex-col items-center text-center max-w-lg">
+                   <div className="mb-8 text-gold drop-shadow-[0_0_15px_rgba(202,138,4,0.4)]">
+                      {getIcon(item.term)}
+                   </div>
+                   <h3 className="text-2xl md:text-4xl font-cinzel text-white mb-6 tracking-widest">{item.term}</h3>
+                   <div className="w-12 h-[1px] bg-crimson/50 mb-8" />
+                   <div className="h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-700 delay-100 overflow-hidden">
+                     <p className="text-gray-200 font-reading text-sm md:text-base leading-relaxed italic px-4">
+                        {item.definition}
+                     </p>
+                   </div>
+                   <div className="mt-12 w-2 h-2 bg-crimson rotate-45 shadow-[0_0_10px_#991b1b]" />
+                </div>
+                <div className="absolute top-4 right-4 w-4 h-4 border-t border-r border-white/10 group-hover:border-gold/50 transition-all duration-500" />
+                <div className="absolute bottom-4 left-4 w-4 h-4 border-b border-l border-white/10 group-hover:border-gold/50 transition-all duration-500" />
               </div>
-              <div className="absolute top-4 right-4 w-4 h-4 border-t border-r border-white/10 group-hover:border-gold/50 transition-all duration-500" />
-              <div className="absolute bottom-4 left-4 w-4 h-4 border-b border-l border-white/10 group-hover:border-gold/50 transition-all duration-500" />
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -125,20 +163,36 @@ export const CharacterSection: React.FC = () => {
         <h2 className="text-3xl font-cinzel text-white mb-2 tracking-[0.2em] uppercase">Dramatis Personae</h2>
         <div className="w-16 h-[1px] bg-red-800 mx-auto mt-6" />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {CHARACTERS.map((char, index) => (
           <div 
             key={char.id} 
             className={`group relative border border-white/5 bg-white/[0.02] p-8 hover:bg-white/[0.04] hover:border-red-900/30 transition-all duration-700 hover:-translate-y-2 rounded-sm transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
             style={{ transitionDelay: `${index * 150}ms` }}
           >
-            <div className="relative z-10 text-center">
-              <div className="w-16 h-16 mx-auto mb-6 bg-gray-900 rounded-full flex items-center justify-center border border-gray-800 group-hover:border-yellow-600/50 transition-colors shadow-lg">
+            <div className="relative z-10 text-center flex flex-col h-full">
+              <div className="w-16 h-16 mx-auto mb-6 bg-gray-900 rounded-full flex items-center justify-center border border-gray-800 group-hover:border-yellow-600/50 transition-colors shadow-lg shrink-0">
                 <User className="w-6 h-6 text-gray-400 group-hover:text-yellow-400 transition-colors" />
               </div>
               <h3 className="text-lg font-cinzel text-white mb-3 group-hover:text-yellow-100 transition-colors">{char.name}</h3>
               <span className="text-[10px] font-montserrat text-red-500 tracking-widest uppercase block mb-6 font-bold">{char.role}</span>
-              <p className="text-gray-300 text-sm italic font-serif leading-relaxed group-hover:text-gray-200 font-normal">"{char.quote}"</p>
+              
+              <div className="flex-1 flex flex-col justify-center">
+                <p className="text-gray-300 text-sm italic font-serif leading-relaxed group-hover:text-gray-200 font-normal transition-all duration-500">
+                  "{char.shortQuote || char.quote}"
+                </p>
+                
+                <div className="h-0 group-hover:h-auto overflow-hidden transition-all duration-500 opacity-0 group-hover:opacity-100">
+                  <p className="text-xs text-gray-400 font-montserrat leading-relaxed border-t border-white/10 pt-4 mt-4 text-left">
+                    {char.quote}
+                  </p>
+                  {char.books && (
+                    <span className="block mt-4 text-[9px] text-gold font-cinzel tracking-widest uppercase text-left">
+                      Appears in: {char.books}
+                    </span>
+                  )}
+                </div>
+              </div>
             </div>
           </div>
         ))}
@@ -228,37 +282,79 @@ export const VaultSection: React.FC<VaultSectionProps> = ({ onOpenStarterPack })
 };
 
 // 8. NEWSLETTER
-export const NewsletterSection: React.FC = () => (
-  <section id="newsletter" className="py-32 px-6 bg-gradient-to-t from-black to-gray-950 border-t border-white/5">
-    <div className="max-w-2xl mx-auto text-center">
-      <Mail className="w-10 h-10 text-gray-400 mx-auto mb-6" />
-      <h2 className="text-4xl font-cinzel text-white mb-4 tracking-wide">JOIN THE REALM</h2>
-      <p className="text-gray-200 font-montserrat mb-10 text-lg font-normal">
-        The Veil whispers only to those who remember. Subscribe for lore drops and hidden codes.
-      </p>
-      <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
-        <input 
-          type="email" 
-          placeholder="Enter your email address" 
-          className="bg-white/5 border border-white/10 px-6 py-4 text-white focus:outline-none focus:border-red-900/50 transition-colors text-center font-montserrat font-normal placeholder:text-gray-500"
-        />
-        <button className="bg-red-700 text-white px-8 py-4 font-cinzel font-bold tracking-[0.2em] hover:bg-red-600 transition-colors shadow-lg hover:shadow-[0_0_20px_rgba(220,38,38,0.4)]">
-          SUBSCRIBE
-        </button>
-      </form>
-    </div>
-  </section>
-);
+export const NewsletterSection: React.FC = () => {
+  const [email, setEmail] = useState("");
+  const [formStatus, setFormStatus] = useState<"idle" | "loading" | "success">("idle");
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+    setFormStatus("loading");
+    setTimeout(() => {
+      setFormStatus("success");
+      setEmail("");
+      setTimeout(() => setFormStatus("idle"), 3000);
+    }, 1500);
+  };
+
+  return (
+    <section id="newsletter" className="py-32 px-6 bg-gradient-to-t from-black to-gray-950 border-t border-white/5">
+      <div className="max-w-4xl mx-auto text-center">
+        <h3 className="text-yellow-400 font-cinzel text-xs tracking-[0.2em] uppercase mb-4 font-bold">The Realm Dispatch</h3>
+        <h2 className="text-4xl font-cinzel text-white mb-6 tracking-wide">ENTER THE ARCHIVE</h2>
+        <p className="text-gray-200 font-montserrat mb-8 text-lg font-normal">
+          First access to new chapters. Hidden lore. Launch alerts. No noise — only signal.
+        </p>
+        
+        <div className="flex flex-wrap justify-center gap-4 mb-10">
+          <span className="bg-white/5 border border-white/10 px-4 py-2 rounded-full text-xs font-montserrat text-gray-300 flex items-center gap-2"><BookOpen className="w-3 h-3 text-gold"/> Early Chapters</span>
+          <span className="bg-white/5 border border-white/10 px-4 py-2 rounded-full text-xs font-montserrat text-gray-300 flex items-center gap-2"><Lock className="w-3 h-3 text-gold"/> Exclusive Lore</span>
+          <span className="bg-white/5 border border-white/10 px-4 py-2 rounded-full text-xs font-montserrat text-gray-300 flex items-center gap-2"><Zap className="w-3 h-3 text-gold"/> Launch Alerts</span>
+          <span className="bg-white/5 border border-white/10 px-4 py-2 rounded-full text-xs font-montserrat text-gray-300 flex items-center gap-2"><ShieldAlert className="w-3 h-3 text-gold"/> No Spam. Ever.</span>
+        </div>
+
+        <form className="flex flex-col gap-4 max-w-md mx-auto" onSubmit={handleSubscribe}>
+          <input 
+            type="email" 
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter your email address" 
+            disabled={formStatus === "loading" || formStatus === "success"}
+            className="bg-white/5 border border-white/10 px-6 py-4 text-white focus:outline-none focus:border-red-900/50 transition-colors text-center font-montserrat font-normal placeholder:text-gray-500 disabled:opacity-50"
+          />
+          <button 
+            type="submit"
+            disabled={formStatus === "loading" || formStatus === "success"}
+            className="bg-red-700 text-white px-8 py-4 font-cinzel font-bold tracking-[0.2em] hover:bg-red-600 transition-colors shadow-lg hover:shadow-[0_0_20px_rgba(220,38,38,0.4)] disabled:opacity-50 disabled:hover:bg-red-700"
+          >
+            {formStatus === "loading" ? "SEALING OATH..." : formStatus === "success" ? "WELCOME TO THE ARCHIVE" : "SUBSCRIBE"}
+          </button>
+          <p className="text-[10px] text-gray-500 font-montserrat mt-4 uppercase tracking-widest">
+            By subscribing, you join the Archive. The Archive does not forget.
+          </p>
+        </form>
+      </div>
+    </section>
+  );
+};
 
 // 9. BEHIND THE VEIL
 export const AuthorNoteSection: React.FC = () => (
-  <section className="py-24 px-6 bg-black">
-    <div className="max-w-3xl mx-auto text-center">
-      <h3 className="text-xs font-cinzel text-gray-400 tracking-[0.3em] uppercase mb-8 font-bold">Behind The Veil</h3>
-      <p className="text-xl md:text-2xl font-serif text-gray-200 leading-relaxed italic opacity-95">
-        "Veiled Realm started as a question: 'What remains when the world insists you don’t exist?' Every story is a fragment of something I refused to forget."
-      </p>
-      <div className="mt-8 text-yellow-600/80 font-cinzel text-xs tracking-widest font-bold">— Imperial X</div>
+  <section className="py-32 px-6 bg-black relative border-t border-white/5">
+    <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-12 items-center">
+      <div className="w-48 h-48 rounded-full overflow-hidden border-2 border-red-900/50 flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-700 shadow-[0_0_30px_rgba(153,27,27,0.3)]">
+        <img src="https://picsum.photos/seed/author/400/400" alt="Likhith CK" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+      </div>
+      <div>
+        <h3 className="text-red-700 font-cinzel text-sm tracking-[0.3em] uppercase mb-2 font-bold">Behind the Veil</h3>
+        <h2 className="text-3xl font-cinzel text-white mb-6">Likhith CK</h2>
+        <p className="text-gray-400 font-montserrat mb-6 text-sm leading-relaxed">
+          {BIO_TEXT}
+        </p>
+        <blockquote className="border-l-2 border-red-800 pl-6 py-2 text-gray-300 font-fantasy text-xl italic">
+          "{BIO_QUOTE}"
+        </blockquote>
+      </div>
     </div>
   </section>
 );
