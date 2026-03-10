@@ -60,7 +60,7 @@ export const Hero: React.FC<HeroProps> = ({ startAnimations = false }) => {
         >
           <div className="h-[1px] w-12 md:w-24 bg-gradient-to-r from-transparent to-gold"></div>
           <span className="text-gold font-cinzel tracking-[0.3em] text-[10px] md:text-xs font-bold uppercase shadow-gold drop-shadow-md">
-            The Complete Works of
+            The Veiled Realm Trilogy · Imperial X
           </span>
           <div className="h-[1px] w-12 md:w-24 bg-gradient-to-l from-transparent to-gold"></div>
         </div>
@@ -79,7 +79,7 @@ export const Hero: React.FC<HeroProps> = ({ startAnimations = false }) => {
         <p 
           className={`text-sm md:text-lg text-gray-400 font-cinzel tracking-[0.35em] uppercase mb-10 max-w-3xl transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
         >
-          Dark Fantasy &nbsp;·&nbsp; Political Philosophy &nbsp;·&nbsp; Inner War
+          A dark fantasy about <span className="text-white">truth</span>, <span className="text-white">memory</span>, and <span className="text-white">rebellion</span> against the system that erased both.
         </p>
 
         <div 

@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { ChevronDown, Download, Mail, User, BookOpen, Database, Lock, Sparkles, Zap, Image, Monitor, Eye, Scroll, ShieldAlert, Swords } from 'lucide-react';
+import { User, BookOpen, Database, Lock, Sparkles, Zap, Image, Monitor, Eye, Scroll, ShieldAlert, Swords } from 'lucide-react';
 import { BIO_TEXT, BIO_QUOTE, LORE_ITEMS, CHARACTERS, DOWNLOADS, STARTER_PACK } from '../constants';
 import { Book3DCard } from './Book3DCard';
 
@@ -346,7 +346,7 @@ export const AuthorNoteSection: React.FC = () => (
         <img src="https://picsum.photos/seed/author/400/400" alt="Likhith CK" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
       </div>
       <div>
-        <h3 className="text-red-700 font-cinzel text-sm tracking-[0.3em] uppercase mb-2 font-bold">Behind the Veil</h3>
+        <h3 className="text-yellow-400 font-cinzel text-xs tracking-[0.2em] uppercase mb-4 font-bold">Behind The Veil — The Realm Dispatch</h3>
         <h2 className="text-3xl font-cinzel text-white mb-6">Likhith CK</h2>
         <p className="text-gray-400 font-montserrat mb-6 text-sm leading-relaxed">
           {BIO_TEXT}

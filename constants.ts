@@ -6,11 +6,13 @@ import { Book, Epoch, LoreItem, Character, Download } from './types';
 const BOOK_1_CHAPTERS = [
   {
     id: "b1-prologue",
-    title: "PROLOGUE — The World Before the Rewrite",
+    title: "Prologue — The World Before the Rewrite",
     content: `"Every world ends twice — first in memory, then in belief."
 
 Before the silence took root.
+
 Before the Voice began curating truth.
+
 Before the Council traded fear for obedience… there was a boy with eyes that saw too far, and a girl who remembered what no one dared to.
 
 Back then, the world was chaotic. Flawed. Brutal. But it was real.
@@ -33,8 +35,8 @@ If you're reading it, maybe… just maybe… the rewrite didn't win.`
   },
   {
     id: "b1-ch1",
-    title: "CHAPTER 1 — Veiled Awakening",
-    content: `PART 1: WAKE-UP PROTOCOL FAILURE
+    title: "Chapter 1 — Veiled Awakening",
+    content: `Part 1: Wake-Up Protocol Failure
 
 The shrill, synthetic chirp of his smart ceiling pierced the early silence.
 
@@ -45,16 +47,14 @@ Aiden Cross groaned, kicking off a tangled blanket of hoodie, cables, and solder
 His smartwatch vibrated violently on the side table.
 
 [Jordan]: "Bro. Get. UP. We're in the middle of the demo pitch. I'm stalling with terrible jokes."
-[Chloe]:  "Tell him to teleport. Or fake a coma. Either would help."
-[Eli]:    "Lab doors lock at 9.03. You have 27 minutes."
+[Chloe]: "Tell him to teleport. Or fake a coma. Either would help."
+[Eli]: "Lab doors lock at 9.03. You have 27 minutes."
 
 Aiden yawned, brushing his hair back. The face in the mirror — green-eyed, tired but focused — looked older than twenty. Under his shirt, he noticed again that faint, ever-present warmth behind his left eye socket. A pulse that didn't feel... natural.
 
 But he shrugged it off. There were more urgent things. Like making sure his smart-shoes didn't electrocute him again.
 
-────────────────────────────────
-
-PART 2: CLASS CHAOS & BROKEN BOTS
+Part 2: Class Chaos & Broken Bots
 
 Redridge's East Tech Complex loomed like a fortress of glass and metal. Inside, lab EC-2 buzzed with caffeinated students assembling final-year prototypes for RedridgeX, the biggest intercollegiate tech fest on the West Coast.
 
@@ -70,25 +70,17 @@ Eli Park didn't look up. He was in the zone, coding furiously while sipping bubb
 
 Aiden leaned over their latest prototype — a quadruped rescue bot that used facial recognition, AI pathfinding, and carbon-fiber joints.
 
-"Power flow is good... but servo 4 is lagging," he muttered. His hands moved on muscle memory. Wires clicked into place. Jordan passed the flux.
+"Power flow is good... but servo 4 is lagging," he muttered. His hands moved on muscle memory. Wires clicked into place.
 
 Chloe asked, "You okay though? You look pale."
 
 Aiden hesitated. "Yeah. Just... weird dreams lately."
 
-He didn't tell them about the pulsing behind his eye. The sound he sometimes heard in his head — like static from another reality. That would sound crazy. Wouldn't it?
-
-────────────────────────────────
-
-PART 3: REDRIDGEX — STORM BEFORE THE SPOTLIGHT
+Part 3: Storm Before the Spotlight
 
 That afternoon, the RedridgeX pre-launch briefing was hosted in the central dome — a breathtaking rotunda of LED screens, hologram beams, and augmented-reality light tunnels.
 
-Hundreds of student teams sat as drones flew above, capturing reels for the university's social media. Aiden's team, "Project Syntheon", was ranked in the top 10.
-
-Dean Carter stood on stage, booming voice amplified.
-
-"Tomorrow begins the 25th RedridgeX. Let your innovations speak. May the boldest minds win."
+Dean Carter stood on stage, booming voice amplified: "Tomorrow begins the 25th RedridgeX. Let your innovations speak. May the boldest minds win."
 
 The crowd roared. But Aiden barely heard it. A sharp vibration flashed behind his eye again. He blinked.
 
@@ -100,46 +92,34 @@ Did I just… imagine that?`
   },
   {
     id: "b1-ch2",
-    title: "CHAPTER 2 — Council in Twilight",
-    content: `PART 1: THE DOME OF MIRRORS
+    title: "Chapter 2 — Council in Twilight",
+    content: `Part 1: The Dome of Mirrors
 
 Beneath a mountain, hidden behind holographic disguises and cloaked by thirteen layers of illusion, the Council of the White Accord assembled in a vaulted crystal dome.
 
 The floor was a massive ring of rune-etched stone. In its center, a sigil pulsed: a silver circle flanked by twin swords — the seal of the Accord.
 
-Seven circular thrones surrounded the floor, each with a flame-lit pedestal behind them, symbolizing their domain.
-
 Selene Ward, Head of Strategy and Security, stood in the center. Her long white coat shimmered faintly with embedded runes, her expression unreadable.
 
 "It blinked," she said, voice calm but taut. "The Dreadful Eye. Last night, Redridge Sector."
 
-Murmurs flared across the room. Councilor Aren Vael, representing the High House of Hollenforth, frowned deeply.
+Murmurs flared across the room.
 
 "He wasn't supposed to awaken for years. The seal—"
 
-"Holds," interrupted Raventhorn, stepping from behind the mirror pedestal. "But he is not a prisoner. He is a carrier. A living gate. And pain… opens gates."
+"Holds," interrupted Raventhorn. "But he is not a prisoner. He is a carrier. A living gate. And pain… opens gates."
 
-Selene nodded. "He triggered a partial defense reflex. Enough to vaporize a Darkshade-class specter. No casualties. But the telemetry was seen by more than us."
-
-Another councilor, Tyrien Ashell, leaned forward. "The Covenant?"
+"The Covenant?" Tyrien Ashell leaned forward.
 
 Selene grimaced. "Possibly. And if they confirm his location, we risk reigniting the pact war."
 
-"So what do we do?" Tyrien asked. "Contain him?"
+"So what do we do? Contain him?"
 
-"We watch him," Selene replied. "But we don't interfere unless the Eye fully opens. Unless," she added, eyes narrowing, "the Covenant moves first."
+"We watch him," Selene replied. "But we don't interfere unless the Eye fully opens. Unless the Covenant moves first."
 
-────────────────────────────────
+Part 2: Shadows That Stir
 
-PART 2: SHADOWS THAT STIR
-
-Miles away — deep within a realm invisible to satellites, beneath a forest no map acknowledged — House Nightmire's Sanctum stood like a scar in reality.
-
-The air here was thick with ancient power. The trees whispered screams.
-
-Sylara Nightmire, Second-born of the 8th Emperor, stood atop a jagged obsidian outcropping, staring into a basin filled with memories.
-
-The water boiled black.
+Miles away — deep within a realm invisible to satellites, beneath a forest no map acknowledged — Sylara Nightmire stood atop a jagged obsidian outcropping, staring into a basin filled with memories. The water boiled black.
 
 "He blinked," she whispered, a twisted smile forming. "So the blood remembers."
 
@@ -153,79 +133,54 @@ A slow ripple passed through the trees. Elsewhere in the darkness, other emperor
   },
   {
     id: "b1-ch3",
-    title: "CHAPTER 3 — Ghosts of Redridge",
-    content: `PART 1: THE MESSAGE THAT SHOULDN'T EXIST
+    title: "Chapter 3 — Ghosts of Redridge",
+    content: `Part 1: The Message That Shouldn't Exist
 
 It was 2:17 AM when Aiden's phone buzzed.
 
-He had just shut down his laptop after hours of debugging the bot's AI feedback loops, trying to focus on something — anything — normal. But the pulse behind his eye had returned, stronger. Like a storm brewing in his skull.
+He had just shut down his laptop after hours of debugging the bot's AI feedback loops. But the pulse behind his eye had returned, stronger. Like a storm brewing in his skull.
 
-He reached for the phone on his desk.
-
-Unknown Number
-
-"Do you still remember me, Aiden? – R."
+Unknown Number: "Do you still remember me, Aiden? – R."
 
 His blood ran cold.
 
-He read the message again. Once. Twice. A third time.
-
-R…?
-
-There was only one person who ever signed off with just "R." But she was gone. Dead. Buried beneath a quiet headstone in Portland, far from this life, far from everything he had become.
+R…? There was only one person who ever signed off with just "R." But she was gone. Dead. Buried beneath a quiet headstone in Portland.
 
 His fingers trembled. He responded: "Who is this?"
 
-No reply.
-
-Instead, the phone vibrated violently. Not once — repeatedly. Aiden stared as messages flooded in, one by one.
+No reply. Instead, messages flooded in one by one.
 
 "You promised you'd never let go."
 "Why didn't you save me?"
 "It's waking, Aiden."
 "The Door opens from inside."
 "They're coming."
-
-And then, finally:
-
 "Use Form 2. You'll need it tonight."
 
 The screen cracked spontaneously in his hand. Aiden's reflection blinked back at him in the shattered glass — but for a split moment, his left eye was no longer human.`
   },
   {
     id: "b1-ch4",
-    title: "CHAPTER 4 — Echoes of the Past",
-    content: `PART 1: SHADOWS IN THE FRAME
+    title: "Chapter 4 — Echoes of the Past",
+    content: `Part 1: Shadows in the Frame
 
 Aiden sat in darkness, the light from his shattered phone flickering across the room like a dying signal.
 
-The video was still playing on loop — grainy, half-corrupted — but the final frame burned into his vision: Rena. That gentle smile. The pendant — hers. The way her hair fell to the side. The way she tilted her head like she used to.
-
-But she was gone. Had been gone. He had watched her go. So how the hell…?
+The video was still playing on loop — grainy, half-corrupted — but the final frame burned into his vision: Rena. That gentle smile. The pendant — hers.
 
 "I'm still here, Aiden. Find me."
 
-He ran the video through three decryption tools. Nothing. The metadata was scrubbed. The timestamp? Blank. No originating IP. No sender number traceable.
+He ran the video through three decryption tools. Nothing. The metadata was scrubbed. No originating IP.
 
-Except… at frame 492, hidden in the corrupted data, he found a sliver of light. A ghosted geotag.
+Except… at frame 492, hidden in the corrupted data, he found a sliver of light. A ghosted geotag: "Theta Node – Archive Red 74"
 
-"Theta Node – Archive Red 74"
+Theta Nodes weren't on the city grid. They were fragments of the Accord's old surveillance network, long believed to be dismantled. Hidden data caches. Forbidden territory.
 
-He blinked. Theta Nodes weren't on the city grid. They were fragments of the Accord's old surveillance network, long believed to be dismantled after the U.S. Familia War 18 years ago. Hidden data caches. Forbidden territory.
+Part 2: Underneath It All
 
-If something — or someone — had used Theta Archive Red 74 to send a message, it meant one thing: The Accord knew. And they'd let it happen.
+By 4:00 PM, he was five miles off campus, at a decommissioned hydroelectric control station. Maintained silence. Doors opened before he touched them.
 
-────────────────────────────────
-
-PART 2: UNDERNEATH IT ALL
-
-Aiden skipped classes the next day. By 4:00 PM, he was five miles off campus, in the industrial sprawl past the bio-lab research arcologies. The address pinged as a decommissioned hydroelectric control station.
-
-Abandoned. Or so the public records said. But beneath it… power flowed. His Familia pulsed as he neared the building.
-
-Inside, dust swirled — but there were no rats. No decay. Just silence. Maintained silence.
-
-He passed down a metal stairwell into the dark. Doors opened before he touched them. And in the core of the station, he found it:
+In the core of the station, he found it:
 
 ARCHIVE NODE: THETA – RED 74
 Access Level: Imperialx – Authorized
@@ -236,38 +191,30 @@ His heart pounded. The system scanned him automatically — a cold light dancing
   },
   {
     id: "b1-ch5",
-    title: "CHAPTER 5 — The Fractured Code",
-    content: `PART 1: SIGNALS IN THE STATIC
+    title: "Chapter 5 — The Fractured Code",
+    content: `Part 1: Signals in the Static
 
 Aiden Cross wasn't sleeping anymore. Every time he closed his eyes, he saw her — not just as a memory, but as something active, present, like a beacon lost in a storm.
 
-He hadn't told Chloe or Jordan about the pendant. Or the Accord. Or Null. Not even about the Covenant's attack. He convinced himself it was safer for them that way.
+He hadn't told Chloe or Jordan about the Accord. Or Null. Not even about the Covenant's attack. He convinced himself it was safer for them that way.
 
 But secrets come with weight. And cracks.
-And by Friday, the cracks were starting to show.
 
-────────────────────────────────
-
-PART 2: NOTICING THE GLITCH
+Part 2: Noticing the Glitch
 
 "Dude," Jordan said, handing Aiden a Red Bull. "You've been writing the same line of code for ten minutes."
 
-Aiden blinked at the screen. Sure enough:
-if (signal !== NULL) { if (signal !== NULL) { if (signal !== NULL) {
-
-He looked down at his keyboard. The key was jammed. No — his fingers were stuck.
+Aiden blinked at the screen. Sure enough: if (signal !== NULL) { if (signal !== NULL) { if (signal !== NULL) {
 
 "Sorry. Just tired," he muttered.
 
 Chloe crossed her arms. "You sure that's it?"
 
-Aiden nodded. But Chloe didn't believe him. And she was right not to. Because just beneath the surface of Redridge's clean concrete walls, something was humming. A quiet, almost imperceptible thrum in the frequencies — inaudible to most, but visible to someone with the Eye.
+Aiden nodded. But just beneath the surface of Redridge's clean concrete walls, something was humming. A quiet, almost imperceptible thrum — inaudible to most, but visible to someone with the Eye.
 
-────────────────────────────────
+Part 3: The First Code Bleed
 
-PART 3: THE FIRST CODE BLEED
-
-Later that night, as Aiden reviewed their bot's logic tree, his laptop screen flickered. Then shifted. The screen split open — not physically, but visually. Like a mirrored crack, revealing something beneath the OS. Something not coded by human hands.
+Later that night, his laptop screen flickered. Then shifted. Like a mirrored crack, revealing something beneath the OS. Something not coded by human hands.
 
 A line of text appeared in glowing red:
 
@@ -280,7 +227,7 @@ Aiden gasped. The laptop sparked — and went black.`
 const BOOK_2_CHAPTERS = [
   {
     id: "b2-prologue",
-    title: "PROLOGUE — The Memory That Never Was",
+    title: "Prologue — The Memory That Never Was",
     content: `Cycle Year 312 After The Rewrite | Thread Integrity Index: 82%
 
 The world had forgotten how to dream.
@@ -295,8 +242,7 @@ PAIN IS NO LONGER REQUIRED FOR GROWTH.
 
 He had copied the phrase a thousand times without thinking. Tonight, the words bled.
 
-A single entry blinked red among the blue archives:
-"Valcrest, Aiden — Prohibited Classification: EYE."
+A single entry blinked red among the blue archives: "Valcrest, Aiden — Prohibited Classification: EYE."
 
 He hesitated. His training told him to flag it, delete it, forget it. Instead he opened it.
 
@@ -306,16 +252,14 @@ The vault lights dimmed. A sound — half heartbeat, half static — filled the 
 
 The capsule nearest him shattered. Dream fluid hissed across the floor, carrying the smell of ozone and rain that had not fallen in centuries.
 
-The Harmony Engine's console flashed a warning he had never seen:
-
 THREAD RECURSION DETECTED — SOURCE: CHLOE VALCREST // ECLIPSED OATH.
 
 And far above the vault, the perfect orbit of the Halo Witness flickered — once — like a closing eye.`
   },
   {
     id: "b2-ch1",
-    title: "CHAPTER 1 — The Archivist of Dreams",
-    content: `PART 1: GLASS AND SILENCE
+    title: "Chapter 1 — The Archivist of Dreams",
+    content: `Part 1: Glass and Silence
 
 Morning in Verdant was a hymn sung by machines.
 
@@ -337,23 +281,21 @@ But the bruise under his skin pulsed again — three beats, pause, three beats. 
 
 REMEMBER ME.
 
-────────────────────────────────
+Part 2: The Girl in the Reflection
 
-PART 2: THE GIRL IN THE REFLECTION
-
-That evening, the Registry's mirror servers recalibrated. Elias monitored their light tunnels when a face appeared inside the glass — not his, not any citizen file.
+That evening, the Registry's mirror servers recalibrated. A face appeared inside the glass — not his, not any citizen file.
 
 A girl — pale, hair-streaked silver, eyes violet-red.
 
 "Do you dream, Archivist?" she asked from inside the reflection.
 
-He froze. The system logged no anomaly. Cameras saw nothing.
+He froze. The system logged no anomaly.
 
 "Who are you?"
 
 "The daughter of a promise," she said softly. "And the world's next mistake."
 
-Static rippled through the glass; her image fractured into seven shards, each showing a different skyline — ancient Redridge, the burning Accord, the dark spiral of the old Echo Tree.
+Her image fractured into seven shards, each showing a different skyline — ancient Redridge, the burning Accord, the dark spiral of the old Echo Tree.
 
 Before vanishing, she whispered a name he shouldn't know. "Chloe."
 
@@ -361,8 +303,8 @@ Every mirror in the Registry blacked out.`
   },
   {
     id: "b2-ch2",
-    title: "CHAPTER 2 — The Girl Who Remembers Tomorrow",
-    content: `PART 1: THE GIRL AND THE CLOCK
+    title: "Chapter 2 — The Girl Who Remembers Tomorrow",
+    content: `Part 1: The Girl and the Clock
 
 The lower city dreamed in rust instead of gold.
 
@@ -370,96 +312,30 @@ Steam hissed from the prayer vents, mixing incense with machine oil. Among the n
 
 Her name was Reya.
 
-Inside the drone she found a music chip — ancient, half-melted — and slipped it into the pocket sewn behind her ribs. She'd grown up scavenging fragments of the world that came before belief, and she was the only one in her block who still asked questions out loud.
+She'd grown up scavenging fragments of the world that came before belief, and she was the only one in her block who still asked questions out loud.
 
-Above her, the Halo Witness traced its arc again.
-
-For an instant it halted — stuttered — as if buffering reality.
+Above her, the Halo Witness traced its arc again. For an instant it halted — stuttered — as if buffering reality.
 
 Reya looked up and smiled. "It blinked," she whispered. "He's coming back."
 
-The street preacher nearby froze. "No one comes back," he said, eyes wide. "That's heresy."
+The street preacher nearby froze. "No one comes back. That's heresy."
 
 But Reya just walked away, the faint hum of a forbidden lullaby following her into the fog.
 
-────────────────────────────────
-
-PART 2: THE DREAM INTERCEPT
+Part 2: The Dream Intercept
 
 At midnight, in the Dream Registry's overflow grid, Elias was still replaying the mirror incident. Each frame he slowed revealed the same distortion: a child's silhouette overlapping the girl's face — one heartbeat out of sync.
 
-He ran a deep-trace scan. The coordinates pointed downward, beneath Verdant's belief network, where human dreams weren't supposed to form. An address flickered:
+He ran a deep-trace scan. The coordinates pointed downward, beneath Verdant's belief network, where human dreams weren't supposed to form.
 
 GRID 9 / Orphan Code R-74
 
-He shouldn't go. The Accord remnants patrolled the under-districts. But the pattern on his palm pulsed again — three beats, pause, three beats.
-
-Remember me.`
-  },
-  {
-    id: "b2-ch3",
-    title: "CHAPTER 3 — The City That Prays to Machines",
-    content: `PART 1: SERMON OF LIGHT
-
-Morning returned too bright, too calm. Every street screen showed the same face: Arch-Curator Voss, high priest of the Belief Codex. Her smile was perfect. Her tone, surgical.
-
-"Harmony is grace. Doubt is corrosion. Today, the Halo Witness re-aligns to bless Verdant with another year of certainty."
-
-Crowds applauded.
-
-Elias stood among them, Reya hidden beneath a borrowed cloak. She watched the screens like a cornered animal.
-
-"They pray to code," she whispered.
-
-He nodded. "And it answers."
-
-Above them, the Halo Witness pulsed once for every heartbeat in the city — syncing minds, calibrating emotions. People sighed in unison. Only Elias and the girl were out of rhythm.
-
-────────────────────────────────
-
-PART 2: THE BROKEN PRAYER
-
-Deep inside the Spire, the Belief Codex broadcast chamber resembled a cathedral made of circuits. Elias hacked an access terminal, his fingers trembling.
-
-"Show me the core feed."
-
-Lines of devotion scrolled faster than sight — billions of affirmations from citizens. Each belief line ended with an encryption key shaped like an eye.
-
-He froze when one message repeated endlessly through the stream:
-
-"Forgive the Threadwalker."
-
-He traced its source — an unregistered node buried in the same vault he'd seen in his dream. The node ID glowed faintly: R-74. Reya's orphan code.
-
-The Halo Witness dimmed, as if it, too, were listening.`
-  },
-  {
-    id: "b2-ch4",
-    title: "CHAPTER 4 — The Cracked Halo",
-    content: `PART 1: WHEN HEAVEN STUTTERS
-
-The Halo Witness blinked again.
-
-Not the gentle pulse Verdant saw each night, but a violent flicker that carved thunder across the sky. For the first time since the Accord's fall, people looked up in fear rather than devotion.
-
-On every broadcast, Curator Voss's voice trembled as she recited protocol. "Remain calm. The light is recalibrating."
-
-But even she could feel it — the beat was wrong. Out of rhythm. Out of control.
-
-Inside the chamber, Elias stood at the base of the belief engines. Holographic prayers streamed past him like waterfalls of light. The chamber smelled of burnt ozone and sanctified oil.
-
-The central mirror cracked. Just a hairline fracture, but the sound went through him like a scream.
-
-Through the fracture he saw something that wasn't reflection: a city burning in reverse, a woman of light standing before an inverted sun.
-
-And behind her, faint and furious, a child's voice whispered through static:
-
-"The Halo was never the Eye. It's the shell it left behind."`
+He shouldn't go. The Accord remnants patrolled the under-districts. But the pattern on his palm pulsed again — three beats, pause, three beats. Remember me.`
   },
   {
     id: "b2-ch5",
-    title: "CHAPTER 5 — The Return of the Blades",
-    content: `PART 1: THE FALLEN COALESCENCE
+    title: "Chapter 5 — The Return of the Blades",
+    content: `Part 1: The Fallen Coalescence
 
 The plaza had always been a place of memory made benign. Tonight, it was a battlefield.
 
@@ -469,15 +345,15 @@ Elias and Reya emerged into that storm like two people who had been forgetful fo
 
 They were not alone.
 
-Movement at the plaza's far rim resolved into silhouettes — vertical, precise, impossible. The enforcers that had cornered them earlier lay inert, their helmets cracked open as if something had exhaled right through their armor and left nothing but empty ritual behind.
+Movement at the plaza's far rim resolved into silhouettes — vertical, precise, impossible. The enforcers that had cornered them earlier lay inert, their helmets cracked open as if something had exhaled right through their armor.
 
 From between two carved stone saints stepped figures that looked older than Verdant itself: cloaks torn in the shapes of moons, armor etched with runes that refused to be catalogued.
 
 Blades.
 
-Not the theatrical blades of city myth — those lacquered relics kept behind plexiglass and lit like altars — but living shapes that carried the smell of iron and rain and war. They moved like memories remembering how to hurt.
+Not the theatrical blades of city myth — those lacquered relics kept behind plexiglass — but living shapes that carried the smell of iron and rain and war. They moved like memories remembering how to hurt.
 
-The first of them stopped mid-stride, cocking her head at Elias like a hearing animal. Her hair was cropped to a hard line; a silver scar ran from brow to cheek. The metal at her wrist folded back to reveal a blade-carving that glowed the same fractal as Elias's palm.
+The first of them stopped mid-stride, cocking her head at Elias. Her hair was cropped to a hard line; a silver scar ran from brow to cheek.
 
 "Elias Kaer," she said; her voice was grain and glass. "Archivist. You have an unlicensed resonance."`
   }
@@ -486,8 +362,8 @@ The first of them stopped mid-stride, cocking her head at Elias like a hearing a
 const BOOK_3_CHAPTERS = [
   {
     id: "b3-ch1",
-    title: "CHAPTER 1 — The Fracture Beneath Heaven",
-    content: `I. THE SHATTERING SKY
+    title: "Chapter 1 — The Fracture Beneath Heaven",
+    content: `Part 1: The Shattering Sky
 
 The sky broke before Kael heard it scream.
 
@@ -511,9 +387,7 @@ The land around him pulsed. Not with life. With memory.
 
 He stopped atop a shattered ridge. Below lay Vaelcorne — once the holy citadel of dawnfire, a place where children learned their first oaths and old priests whispered the last rites. Now, it was a grave of glass.
 
-────────────────────────────────
-
-II. THE RIFTBORN
+Part 2: The Riftborn
 
 A crack groaned open in the valley floor below. Dust billowed upward in spirals, coiling like serpents. The ground shuddered. Something rose — slowly, shakily — from the depths of the fracture.
 
@@ -525,8 +399,8 @@ Kael steadied his breath. His heartbeat slowed. His vision tightened into a pred
   },
   {
     id: "b3-ch2",
-    title: "CHAPTER 2 — Ember and Echo",
-    content: `I. THE CANYONS OF SHATTERED MEMORY
+    title: "Chapter 2 — Ember and Echo",
+    content: `Part 1: The Canyons of Shattered Memory
 
 The storm had retreated, but the world still hissed where the molten rain had kissed the stone.
 
@@ -546,9 +420,7 @@ Kael snorted. "And?"
 
 Miraen stopped walking. The runes beneath his staff flared, twisted — then snapped shut like a jaw. "It's arguing with itself," he said softly.
 
-────────────────────────────────
-
-II. THE SILENT AMBUSH
+Part 2: The Silent Ambush
 
 The air thickened. Heat shimmered, rippling across the canyon like invisible serpents. Kael's hand drifted to the hilt of Veydran even before instinct kicked in.
 
@@ -560,8 +432,8 @@ More arrows slammed into it. Each dissolved into sparks.`
   },
   {
     id: "b3-ch3",
-    title: "CHAPTER 3 — The Ashen Citadel",
-    content: `I. THE ROAD THROUGH RUIN
+    title: "Chapter 3 — The Ashen Citadel",
+    content: `Part 1: The Road Through Ruin
 
 Dawn rose without color.
 
@@ -589,8 +461,8 @@ Ahead, the ash plain sloped upward into a ridge of jagged blackstone. And perche
   },
   {
     id: "b3-ch4",
-    title: "CHAPTER 4 — Whispers of Sanctuary",
-    content: `I. BENEATH THE BREATHING HALLS
+    title: "Chapter 4 — Whispers of Sanctuary",
+    content: `Part 1: Beneath the Breathing Halls
 
 The corridors beneath Velmirath were not built — they were grown.
 
@@ -606,9 +478,7 @@ Kael glanced sideways. "Define 'interesting.'"
 
 Miraen shrugged. "Fears. Hopes. Secrets. Anything that hurts."
 
-────────────────────────────────
-
-II. THE HIDDEN WING
+Part 2: The Hidden Wing
 
 The corridor narrowed into a sharp bend, then opened suddenly into a cathedral-like hall. Columns of fused bone and obsidian spiraled upward. Suspended lanterns floated in slow circles, shedding dull silver light that seemed tired of its own glow.
 
@@ -618,8 +488,8 @@ Miraen stopped. "This… shouldn't be open."`
   },
   {
     id: "b3-ch5",
-    title: "CHAPTER 5 — The Waking Storm",
-    content: `I. THE CITADEL BREATHES UNEASE
+    title: "Chapter 5 — The Waking Storm",
+    content: `Part 1: The Citadel Breathes Unease
 
 Velmirath did not sleep.
 
@@ -656,7 +526,7 @@ More like a… warning."`
 const BOOK_CA_CHAPTERS = [
   {
     id: "ca-ch1",
-    title: "CHAPTER 1 — The Architecture of Ending",
+    title: "Chapter 1 — The Architecture of Ending",
     content: `The proposal arrived on a Tuesday. Viktor read it in four minutes and approved it in the fifth.
 
 He had learned early that the time between reading and deciding was the most dangerous interval in governance. It was where sentiment gathered. Where advisors found purchase. Where the wrong question — not "is this correct?" but "is this survivable?" — had a chance to take hold.
@@ -686,7 +556,7 @@ That was six years ago. Viktor had been thinking about it ever since — not bec
   },
   {
     id: "ca-ch2",
-    title: "CHAPTER 2 — The Coherence Index",
+    title: "Chapter 2 — The Coherence Index",
     content: `The GRPI had not been Viktor's invention.
 
 The framework — Governance Redundancy and Permanence Index — predated him by two administrations. It had been designed, in its original form, as an early warning system: a set of metrics that would signal when a governing structure was beginning to calcify, to mistake its own continuation for its purpose.
@@ -710,7 +580,7 @@ And sixty-three was where the design required the threshold to be.`
   },
   {
     id: "ca-ch3",
-    title: "CHAPTER 3 — The Sorokin Question",
+    title: "Chapter 3 — The Sorokin Question",
     content: `Sorokin had been watching Viktor for eleven years before he asked the question directly.
 
 They were in the eastern reading room — the one Viktor used for conversations he didn't want logged — two glasses of something Sorokin had brought from the south, the kind of silence between them that had stopped being uncomfortable some years ago.
@@ -744,7 +614,7 @@ Viktor picked up his glass.
 const BOOK_LW_CHAPTERS = [
   {
     id: "lw-preface",
-    title: "PREFACE — Before We Begin",
+    title: "Preface — Before We Begin",
     content: `This book does not promise peace.
 
 That distinction matters. Most writing about inner peace is constructed around a promise — that if you follow the steps, complete the exercises, adopt the framework, the war inside you will cease. The noise will stop. The conflict will resolve.
@@ -771,7 +641,7 @@ That is where we begin.`
   },
   {
     id: "lw-ch1",
-    title: "CHAPTER 1 — The Premise",
+    title: "Chapter 1 — The Premise",
     content: `The war began before you knew it was a war.
 
 It began with the first moment you understood that there was a version of yourself that other people approved of — and a version that they did not. It began with the first time you modified your behaviour not because you wanted to but because you wanted the approval more than you wanted to be honest. It began, in other words, with a reasonable choice that had unreasonable consequences.
@@ -792,7 +662,7 @@ You did not choose to go to war with yourself. But you have been fighting. And i
   },
   {
     id: "lw-ch2",
-    title: "CHAPTER 2 — What the War Actually Is",
+    title: "Chapter 2 — What the War Actually Is",
     content: `The inner war is not a fight between your good self and your bad self.
 
 This framing — which appears in almost every popular account of self-improvement, in religious traditions across cultures, in therapeutic language, in the kind of motivational content that circulates on social media — is seductive because it is simple. It divides the problem into two sides. It implies a winner and a loser. It suggests that the goal is victory.
@@ -813,7 +683,7 @@ And until that relationship changes, the war does not end. It relocates.`
   },
   {
     id: "lw-ch5",
-    title: "CHAPTER 5 — The Responsibility Distinction",
+    title: "Chapter 5 — The Responsibility Distinction",
     content: `There is a difference between taking responsibility for your life and taking responsibility for every feeling in it.
 
 This sounds obvious. Most people, if asked directly, would agree with it. And yet the way most people actually live suggests they have not made this distinction operational — they have accepted it as a sentence in a book and continued to hold themselves accountable for the full emotional weather of their existence as though feelings were failures rather than information.
@@ -839,7 +709,7 @@ The responses to them are where responsibility lives.`
 const BOOK_LL_CHAPTERS = [
   {
     id: "ll-opening",
-    title: "OPENING — Before You Call It Fine",
+    title: "Opening — Before You Call It Fine",
     content: `There is a specific kind of exhaustion that comes not from doing too much, but from maintaining the performance of being okay when you are not.
 
 It is different from physical tiredness. It is different from the honest fatigue that follows difficult work. It is the tiredness of holding a shape that doesn't fit — of existing slightly to the left of where you actually are, so that the gap between the official version and the real one doesn't become visible to anyone, including yourself.
@@ -862,7 +732,7 @@ It is also, in my experience, the only way through.`
   },
   {
     id: "ll-ch3",
-    title: "CHAPTER 3 — The Honest Inventory",
+    title: "Chapter 3 — The Honest Inventory",
     content: `At some point, the question changes.
 
 For a long time, the question is: how do I get from here to there? How do I close the gap between where I am and where I want to be? This is a reasonable question. It is the animating question behind most self-improvement thinking, most goal-setting practice, most therapeutic frameworks.
@@ -887,7 +757,7 @@ The alternative is spending another decade in the wrong direction and calling it
   },
   {
     id: "ll-closing",
-    title: "CLOSING — What Stays",
+    title: "Closing — What Stays",
     content: `The things that stay in low light are the things that were real.
 
 Not the things you performed. Not the things you constructed to manage other people's perceptions or your own. The things that persist when the performance drops — those are the load-bearing elements of your life. Everything else is facade.

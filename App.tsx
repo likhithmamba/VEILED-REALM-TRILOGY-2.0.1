@@ -114,7 +114,7 @@ export default function App() {
 
   // --- EFFECTS ---
   useEffect(() => {
-    document.title = "IMPERIALX | Official Website";
+    document.title = "Veiled Realm Trilogy | Imperial X";
   }, []);
 
   // --- RENDER ---
