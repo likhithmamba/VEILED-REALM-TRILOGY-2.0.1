@@ -14,6 +14,9 @@ export interface Book {
   excerpt: string;
   buyUrl: string;
   chapters: Chapter[];
+  series: 'veiled-realm' | 'standalone';
+  genre: string;
+  genreLabel: string;
 }
 
 export interface Epoch {
@@ -28,6 +31,7 @@ export interface LoreItem {
   id: string;
   term: string;
   definition: string;
+  universe: 'veiled-realm' | 'crimson-architect' | 'shared';
 }
 
 export interface Character {
@@ -35,8 +39,9 @@ export interface Character {
   name: string;
   role: string;
   quote: string;
-  shortQuote?: string;
-  books?: string;
+  bookId: number;
+  bookTitle: string;
+  series: 'veiled-realm' | 'crimson-architect' | 'standalone';
 }
 
 export interface Download {

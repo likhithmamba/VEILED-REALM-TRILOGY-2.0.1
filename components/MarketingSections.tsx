@@ -59,6 +59,7 @@ export const AboutSection: React.FC = () => (
 // 4. LORE
 export const LoreSection: React.FC = () => {
   const { elementRef, isVisible } = useScrollObserver();
+  const [activeUniverse, setActiveUniverse] = useState<'veiled-realm' | 'crimson-architect'>('veiled-realm');
 
   const getIcon = (term: string) => {
     switch (term) {
@@ -67,80 +68,66 @@ export const LoreSection: React.FC = () => {
       case 'The Eclipser': return <ShieldAlert className="w-8 h-8 md:w-12 md:h-12" />;
       case 'Riftborn': return <Swords className="w-8 h-8 md:w-12 md:h-12" />;
       case 'Mirrorseed': return <Sparkles className="w-8 h-8 md:w-12 md:h-12" />;
+      case 'The GRPI': return <Database className="w-8 h-8 md:w-12 md:h-12" />;
+      case 'Coherence Audit': return <Eye className="w-8 h-8 md:w-12 md:h-12" />;
+      case 'Managed Dissolution': return <Zap className="w-8 h-8 md:w-12 md:h-12" />;
       default: return <Sparkles className="w-8 h-8 md:w-12 md:h-12" />;
     }
   };
+
+  const filteredLore = LORE_ITEMS.filter(item => item.universe === activeUniverse);
 
   return (
     <section ref={elementRef} className="py-32 px-6 bg-[#030005] border-y border-white/5 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(153,27,27,0.15)_0%,_transparent_60%)] pointer-events-none opacity-40"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl md:text-5xl font-cinzel text-gold mb-4 tracking-[0.15em]">A World Built on Forgetting</h2>
           <div className="w-24 h-[1px] bg-red-800 mx-auto mb-6 shadow-[0_0_10px_#991b1b]"></div>
-          <p className="text-gray-400 font-montserrat text-sm uppercase tracking-[0.3em] font-bold">Tap a Thread to Expand Reality</p>
-          <span className="inline-block mt-4 px-3 py-1 bg-red-900/20 border border-red-900/50 text-red-500 text-[10px] font-cinzel tracking-widest uppercase rounded-sm">
-            Veiled Realm Trilogy
-          </span>
+          <p className="text-gray-400 font-montserrat text-sm uppercase tracking-[0.3em] font-bold mb-8">Tap a Thread to Expand Reality</p>
+          
+          <div className="flex justify-center gap-4 mb-4">
+            <button 
+              onClick={() => setActiveUniverse('veiled-realm')}
+              className={`px-4 py-2 border text-xs font-cinzel tracking-widest uppercase rounded-sm transition-all duration-300 ${activeUniverse === 'veiled-realm' ? 'bg-red-900/20 border-red-900/50 text-red-500' : 'bg-white/5 border-white/10 text-gray-500 hover:text-gray-300'}`}
+            >
+              Veiled Realm
+            </button>
+            <button 
+              onClick={() => setActiveUniverse('crimson-architect')}
+              className={`px-4 py-2 border text-xs font-cinzel tracking-widest uppercase rounded-sm transition-all duration-300 ${activeUniverse === 'crimson-architect' ? 'bg-blue-900/20 border-blue-900/50 text-blue-500' : 'bg-white/5 border-white/10 text-gray-500 hover:text-gray-300'}`}
+            >
+              Crimson Architect
+            </button>
+          </div>
         </div>
         
         <div className="space-y-4">
-          <div className={`flex flex-col md:flex-row w-full min-h-[400px] md:h-[500px] gap-2 p-2 bg-white/[0.02] border border-white/5 rounded-sm transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-            {LORE_ITEMS.slice(0, 5).map((item) => (
+          <div className={`flex flex-col md:flex-row flex-wrap w-full min-h-[400px] md:h-[500px] gap-2 p-2 bg-white/[0.02] border border-white/5 rounded-sm transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+            {filteredLore.map((item) => (
               <div 
                 key={item.id}
-                className="group flex-1 min-w-0 md:hover:flex-[4] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] cursor-pointer relative border border-crimson/10 bg-[#080508]/80 hover:bg-[#0c080c] hover:border-crimson/40 overflow-hidden flex items-center justify-center p-6"
+                className={`group flex-1 min-w-[250px] md:hover:flex-[4] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] cursor-pointer relative border bg-[#080508]/80 hover:bg-[#0c080c] overflow-hidden flex items-center justify-center p-6 ${activeUniverse === 'veiled-realm' ? 'border-crimson/10 hover:border-crimson/40' : 'border-blue-900/20 hover:border-blue-500/40'}`}
               >
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                    <span className="md:rotate-[-90deg] whitespace-nowrap transition-all duration-700 uppercase tracking-[0.4em] font-cinzel text-gray-500 group-hover:text-gold group-hover:opacity-0 group-hover:scale-150 text-sm md:text-lg">
                       {item.term}
                    </span>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-b from-crimson/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                <div className={`absolute inset-0 bg-gradient-to-b opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none ${activeUniverse === 'veiled-realm' ? 'from-crimson/10 to-transparent' : 'from-blue-900/20 to-transparent'}`} />
                 <div className="opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-150 transform translate-y-10 group-hover:translate-y-0 flex flex-col items-center text-center max-w-lg">
                    <div className="mb-8 text-gold drop-shadow-[0_0_15px_rgba(202,138,4,0.4)]">
                       {getIcon(item.term)}
                    </div>
                    <h3 className="text-2xl md:text-4xl font-cinzel text-white mb-6 tracking-widest">{item.term}</h3>
-                   <div className="w-12 h-[1px] bg-crimson/50 mb-8" />
+                   <div className={`w-12 h-[1px] mb-8 ${activeUniverse === 'veiled-realm' ? 'bg-crimson/50' : 'bg-blue-500/50'}`} />
                    <div className="h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-700 delay-100 overflow-hidden">
                      <p className="text-gray-200 font-reading text-sm md:text-base leading-relaxed italic px-4">
                         {item.definition}
                      </p>
                    </div>
-                   <div className="mt-12 w-2 h-2 bg-crimson rotate-45 shadow-[0_0_10px_#991b1b]" />
-                </div>
-                <div className="absolute top-4 right-4 w-4 h-4 border-t border-r border-white/10 group-hover:border-gold/50 transition-all duration-500" />
-                <div className="absolute bottom-4 left-4 w-4 h-4 border-b border-l border-white/10 group-hover:border-gold/50 transition-all duration-500" />
-              </div>
-            ))}
-          </div>
-
-          <div className={`flex flex-col md:flex-row w-full min-h-[400px] md:h-[500px] gap-2 p-2 bg-white/[0.02] border border-white/5 rounded-sm transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-            {LORE_ITEMS.slice(5, 10).map((item) => (
-              <div 
-                key={item.id}
-                className="group flex-1 min-w-0 md:hover:flex-[4] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] cursor-pointer relative border border-crimson/10 bg-[#080508]/80 hover:bg-[#0c080c] hover:border-crimson/40 overflow-hidden flex items-center justify-center p-6"
-              >
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                   <span className="md:rotate-[-90deg] whitespace-nowrap transition-all duration-700 uppercase tracking-[0.4em] font-cinzel text-gray-500 group-hover:text-gold group-hover:opacity-0 group-hover:scale-150 text-sm md:text-lg">
-                      {item.term}
-                   </span>
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-b from-crimson/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-                <div className="opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-150 transform translate-y-10 group-hover:translate-y-0 flex flex-col items-center text-center max-w-lg">
-                   <div className="mb-8 text-gold drop-shadow-[0_0_15px_rgba(202,138,4,0.4)]">
-                      {getIcon(item.term)}
-                   </div>
-                   <h3 className="text-2xl md:text-4xl font-cinzel text-white mb-6 tracking-widest">{item.term}</h3>
-                   <div className="w-12 h-[1px] bg-crimson/50 mb-8" />
-                   <div className="h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-700 delay-100 overflow-hidden">
-                     <p className="text-gray-200 font-reading text-sm md:text-base leading-relaxed italic px-4">
-                        {item.definition}
-                     </p>
-                   </div>
-                   <div className="mt-12 w-2 h-2 bg-crimson rotate-45 shadow-[0_0_10px_#991b1b]" />
+                   <div className={`mt-12 w-2 h-2 rotate-45 ${activeUniverse === 'veiled-realm' ? 'bg-crimson shadow-[0_0_10px_#991b1b]' : 'bg-blue-500 shadow-[0_0_10px_#3b82f6]'}`} />
                 </div>
                 <div className="absolute top-4 right-4 w-4 h-4 border-t border-r border-white/10 group-hover:border-gold/50 transition-all duration-500" />
                 <div className="absolute bottom-4 left-4 w-4 h-4 border-b border-l border-white/10 group-hover:border-gold/50 transition-all duration-500" />
@@ -157,45 +144,100 @@ export const LoreSection: React.FC = () => {
 export const CharacterSection: React.FC = () => {
   const { elementRef, isVisible } = useScrollObserver();
 
+  const veiledRealmChars = CHARACTERS.filter(c => c.series === 'veiled-realm');
+  const crimsonArchitectChars = CHARACTERS.filter(c => c.series === 'crimson-architect');
+
+  const getBookColor = (bookId: number) => {
+    switch (bookId) {
+      case 1: return 'red';
+      case 2: return 'blue';
+      case 3: return 'purple';
+      case 4: return 'emerald';
+      default: return 'gray';
+    }
+  };
+
   return (
     <section ref={elementRef} className="py-32 px-6 max-w-7xl mx-auto bg-gray-900/50">
       <div className={`text-center mb-20 transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
         <h2 className="text-3xl font-cinzel text-white mb-2 tracking-[0.2em] uppercase">Dramatis Personae</h2>
         <div className="w-16 h-[1px] bg-red-800 mx-auto mt-6" />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {CHARACTERS.map((char, index) => (
-          <div 
-            key={char.id} 
-            className={`group relative border border-white/5 bg-white/[0.02] p-8 hover:bg-white/[0.04] hover:border-red-900/30 transition-all duration-700 hover:-translate-y-2 rounded-sm transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-            style={{ transitionDelay: `${index * 150}ms` }}
-          >
-            <div className="relative z-10 text-center flex flex-col h-full">
-              <div className="w-16 h-16 mx-auto mb-6 bg-gray-900 rounded-full flex items-center justify-center border border-gray-800 group-hover:border-yellow-600/50 transition-colors shadow-lg shrink-0">
-                <User className="w-6 h-6 text-gray-400 group-hover:text-yellow-400 transition-colors" />
-              </div>
-              <h3 className="text-lg font-cinzel text-white mb-3 group-hover:text-yellow-100 transition-colors">{char.name}</h3>
-              <span className="text-[10px] font-montserrat text-red-500 tracking-widest uppercase block mb-6 font-bold">{char.role}</span>
-              
-              <div className="flex-1 flex flex-col justify-center">
-                <p className="text-gray-300 text-sm italic font-serif leading-relaxed group-hover:text-gray-200 font-normal transition-all duration-500">
-                  "{char.shortQuote || char.quote}"
-                </p>
-                
-                <div className="h-0 group-hover:h-auto overflow-hidden transition-all duration-500 opacity-0 group-hover:opacity-100">
-                  <p className="text-xs text-gray-400 font-montserrat leading-relaxed border-t border-white/10 pt-4 mt-4 text-left">
-                    {char.quote}
-                  </p>
-                  {char.books && (
-                    <span className="block mt-4 text-[9px] text-gold font-cinzel tracking-widest uppercase text-left">
-                      Appears in: {char.books}
-                    </span>
-                  )}
+      
+      <div className="space-y-24">
+        {/* Veiled Realm Characters */}
+        <div>
+          <h3 className="text-2xl font-cinzel text-gold mb-8 tracking-widest text-center border-b border-white/10 pb-4">Veiled Realm</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {veiledRealmChars.map((char, index) => {
+              const color = getBookColor(char.bookId);
+              return (
+                <div 
+                  key={char.id} 
+                  className={`group relative border border-white/5 bg-white/[0.02] p-8 hover:bg-white/[0.04] transition-all duration-700 hover:-translate-y-2 rounded-sm transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'} hover:border-${color}-900/30`}
+                  style={{ transitionDelay: `${index * 150}ms` }}
+                >
+                  <div className="relative z-10 text-center flex flex-col h-full">
+                    <div className={`w-16 h-16 mx-auto mb-6 bg-gray-900 rounded-full flex items-center justify-center border border-gray-800 group-hover:border-${color}-600/50 transition-colors shadow-lg shrink-0`}>
+                      <User className={`w-6 h-6 text-gray-400 group-hover:text-${color}-400 transition-colors`} />
+                    </div>
+                    <h3 className="text-lg font-cinzel text-white mb-3 group-hover:text-yellow-100 transition-colors">{char.name}</h3>
+                    <span className={`text-[10px] font-montserrat text-${color}-500 tracking-widest uppercase block mb-6 font-bold`}>{char.role}</span>
+                    
+                    <div className="flex-1 flex flex-col justify-center">
+                      <p className="text-gray-300 text-sm italic font-serif leading-relaxed group-hover:text-gray-200 font-normal transition-all duration-500">
+                        "{char.quote}"
+                      </p>
+                      
+                      <div className="h-0 group-hover:h-auto overflow-hidden transition-all duration-500 opacity-0 group-hover:opacity-100">
+                        <span className={`block mt-4 text-[9px] text-${color}-400 font-cinzel tracking-widest uppercase text-center border-t border-white/10 pt-4`}>
+                          Appears in: {char.bookTitle}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
-        ))}
+        </div>
+
+        {/* Crimson Architect Characters */}
+        <div>
+          <h3 className="text-2xl font-cinzel text-blue-400 mb-8 tracking-widest text-center border-b border-white/10 pb-4">The Crimson Architect</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {crimsonArchitectChars.map((char, index) => {
+              const color = getBookColor(char.bookId);
+              return (
+                <div 
+                  key={char.id} 
+                  className={`group relative border border-white/5 bg-white/[0.02] p-8 hover:bg-white/[0.04] transition-all duration-700 hover:-translate-y-2 rounded-sm transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'} hover:border-${color}-900/30`}
+                  style={{ transitionDelay: `${index * 150}ms` }}
+                >
+                  <div className="relative z-10 text-center flex flex-col h-full">
+                    <div className={`w-16 h-16 mx-auto mb-6 bg-gray-900 rounded-full flex items-center justify-center border border-gray-800 group-hover:border-${color}-600/50 transition-colors shadow-lg shrink-0`}>
+                      <User className={`w-6 h-6 text-gray-400 group-hover:text-${color}-400 transition-colors`} />
+                    </div>
+                    <h3 className="text-lg font-cinzel text-white mb-3 group-hover:text-blue-100 transition-colors">{char.name}</h3>
+                    <span className={`text-[10px] font-montserrat text-${color}-500 tracking-widest uppercase block mb-6 font-bold`}>{char.role}</span>
+                    
+                    <div className="flex-1 flex flex-col justify-center">
+                      <p className="text-gray-300 text-sm italic font-serif leading-relaxed group-hover:text-gray-200 font-normal transition-all duration-500">
+                        "{char.quote}"
+                      </p>
+                      
+                      <div className="h-0 group-hover:h-auto overflow-hidden transition-all duration-500 opacity-0 group-hover:opacity-100">
+                        <span className={`block mt-4 text-[9px] text-${color}-400 font-cinzel tracking-widest uppercase text-center border-t border-white/10 pt-4`}>
+                          Appears in: {char.bookTitle}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </section>
   );

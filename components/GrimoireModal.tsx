@@ -98,7 +98,7 @@ export const GrimoireModal: React.FC<GrimoireModalProps> = ({ book, onClose }) =
         <div className="hidden md:flex w-72 flex-col border-r border-white/5 bg-[#0a0a0a]/40 backdrop-blur-xl relative z-20">
           <div className="p-8 pb-4">
             <span className="text-crimson font-cinzel text-[10px] tracking-[0.3em] uppercase block mb-2 opacity-80">
-              IMPERIALX
+              {book.genreLabel || 'IMPERIALX'}
             </span>
             <h1 className="text-xl font-display text-white italic leading-tight">
               {book.title}
@@ -269,9 +269,14 @@ export const GrimoireModal: React.FC<GrimoireModalProps> = ({ book, onClose }) =
                       <p className="text-gray-300 font-reading mb-8">
                          The threads of fate are not yet cut. Secure the complete edition to witness the end.
                       </p>
-                      <button className="px-10 py-4 bg-white text-black font-cinzel font-bold tracking-[0.2em] text-xs hover:bg-yellow-400 transition-colors shadow-[0_0_30px_rgba(255,255,255,0.1)]">
+                      <a 
+                        href={book.buyUrl} 
+                        target="_blank" 
+                        rel="noreferrer" 
+                        className="inline-block px-10 py-4 bg-white text-black font-cinzel font-bold tracking-[0.2em] text-xs hover:bg-yellow-400 transition-colors shadow-[0_0_30px_rgba(255,255,255,0.1)]"
+                      >
                          PURCHASE FULL EDITION
-                      </button>
+                      </a>
                    </div>
                 </div>
 

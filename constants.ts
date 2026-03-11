@@ -787,7 +787,10 @@ export const BOOKS: Book[] = [
     coverUrl: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2070&auto=format&fit=crop", 
     excerpt: "Every world ends twice — first in memory, then in belief.",
     buyUrl: "https://example.com/book1",
-    chapters: BOOK_1_CHAPTERS
+    chapters: BOOK_1_CHAPTERS,
+    series: 'veiled-realm',
+    genre: 'dark-fantasy',
+    genreLabel: 'Dark Fantasy'
   },
   {
     id: 2,
@@ -797,7 +800,10 @@ export const BOOKS: Book[] = [
     coverUrl: "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=2022&auto=format&fit=crop",
     excerpt: "If you are reading this, the world still believes the lie.",
     buyUrl: "https://example.com/book2",
-    chapters: BOOK_2_CHAPTERS
+    chapters: BOOK_2_CHAPTERS,
+    series: 'veiled-realm',
+    genre: 'dark-fantasy',
+    genreLabel: 'Dark Fantasy'
   },
   {
     id: 3,
@@ -807,7 +813,10 @@ export const BOOKS: Book[] = [
     coverUrl: "https://images.unsplash.com/photo-1614728263952-84ea206f25ab?q=80&w=1974&auto=format&fit=crop",
     excerpt: "The sky broke before Kael heard it scream.",
     buyUrl: "https://example.com/book3",
-    chapters: BOOK_3_CHAPTERS
+    chapters: BOOK_3_CHAPTERS,
+    series: 'veiled-realm',
+    genre: 'dark-fantasy',
+    genreLabel: 'Dark Fantasy'
   },
   {
     id: 4,
@@ -817,7 +826,10 @@ export const BOOKS: Book[] = [
     coverUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
     excerpt: "Authority must expire. Responsibility must not.",
     buyUrl: "https://example.com/book4",
-    chapters: BOOK_CA_CHAPTERS
+    chapters: BOOK_CA_CHAPTERS,
+    series: 'standalone',
+    genre: 'political-fiction',
+    genreLabel: 'Political Fiction'
   },
   {
     id: 5,
@@ -827,7 +839,10 @@ export const BOOKS: Book[] = [
     coverUrl: "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?q=80&w=2070&auto=format&fit=crop",
     excerpt: "The war is not about your failures. It is about your relationship to the concept of enough.",
     buyUrl: "https://example.com/book5",
-    chapters: BOOK_LW_CHAPTERS
+    chapters: BOOK_LW_CHAPTERS,
+    series: 'standalone',
+    genre: 'philosophy',
+    genreLabel: 'Philosophy'
   },
   {
     id: 6,
@@ -837,7 +852,10 @@ export const BOOKS: Book[] = [
     coverUrl: "https://images.unsplash.com/photo-1505682634904-d7c8d95cdc50?q=80&w=2070&auto=format&fit=crop",
     excerpt: "Low light does not distort. It reveals.",
     buyUrl: "https://example.com/book6",
-    chapters: BOOK_LL_CHAPTERS
+    chapters: BOOK_LL_CHAPTERS,
+    series: 'standalone',
+    genre: 'essay',
+    genreLabel: 'Essay'
   }
 ];
 
@@ -849,6 +867,9 @@ export const STARTER_PACK: Book = {
   coverUrl: "https://images.unsplash.com/photo-1532012197367-bb83d53ba547?q=80&w=1000&auto=format&fit=crop",
   excerpt: "Six books. Three genres. One vision.",
   buyUrl: "https://imperialx.com/bundle",
+  series: 'standalone',
+  genre: 'mixed',
+  genreLabel: 'Mixed Collection',
   chapters: [
     { id: "sep-b1", title: "VEILED REALM I", content: "", isSeparator: true },
     ...BOOK_1_CHAPTERS,
@@ -874,25 +895,31 @@ export const TIMELINE_EPOCHS: Epoch[] = [
 ];
 
 export const LORE_ITEMS: LoreItem[] = [
-  { id: 'l1', term: 'The Halo Witness', definition: 'A god that watches everything and forgets nothing — except what it is told to. It is an infrastructure system — a surveillance mechanism so sophisticated that it became, over three centuries, functionally indistinguishable from a deity. It orbits the realm continuously. It observes. It catalogues.' },
-  { id: 'l2', term: 'The Belief Codex', definition: 'The founding document of the Accord. And the most dangerous piece of legal fiction ever committed to paper. It is taught in every school and cited in every legal proceeding. It is the nominal reason the Halo Witness was commissioned.' },
-  { id: 'l3', term: 'The Hidden Blades', definition: 'Not soldiers. The most dangerous kind of resistance: people who write things down. A network of archivists, former Accord officials, and memory-carriers. Their weapon is the act of record-keeping in a world that makes record-keeping illegal.' },
-  { id: 'l4', term: 'The Dreadful Eye', definition: 'A genetic anomaly that lets its bearer see what the Accord has erased. It allows its bearer to perceive the negative space in the Accord\'s information architecture — the gaps where memories used to be before the Halo Witness removed them.' },
-  { id: 'l5', term: 'The Veil', definition: 'A membrane between truth and memory. Once stable. Now fractured. It is a condition — a state of equilibrium between the actual history of the Veiled Realm and the curated version the Accord distributes through the Belief Codex and the Halo Witness.' },
-  { id: 'l6', term: 'The Accord', definition: 'The governing body of the Veiled Realm. Operates through seven functional positions. Maintains power through forgetting, not force. Citizens of the Accord are not oppressed — they are comfortable, safe, and genuinely unaware that anything is missing.' },
-  { id: 'l7', term: 'Memory as Currency', definition: 'In the Veiled Realm, memory is not metaphorically valuable. It is literally tradeable. The Harmony Engine refines raw memories into transferable experience packets. The wealthy purchase other people\'s lives.' },
-  { id: 'l8', term: 'The Familiar System', definition: 'Bonded companions presented as protectors. Loyal to two masters simultaneously. They genuinely protect their charges. They also report everything to the Accord\'s monitoring architecture.' },
-  { id: 'l9', term: 'The Riftborn', definition: 'Creatures born from forgotten truths. Half thought, half reflection. They show you what you have tried to forget. They emerge at the points where the Veil is thinnest.' },
-  { id: 'l10', term: 'The Mirrorseed', definition: 'Not born of Earth. A witness left behind. When too many lies accumulate, it blooms — and what blooms cannot be un-seen. It is a failsafe: when the ratio of constructed narrative to actual history reaches a certain threshold, the Mirrorseed blooms.' }
+  { id: 'l1', term: 'The Halo Witness', definition: 'A god that watches everything and forgets nothing — except what it is told to. It is an infrastructure system — a surveillance mechanism so sophisticated that it became, over three centuries, functionally indistinguishable from a deity. It orbits the realm continuously. It observes. It catalogues.', universe: 'veiled-realm' },
+  { id: 'l2', term: 'The Belief Codex', definition: 'The founding document of the Accord. And the most dangerous piece of legal fiction ever committed to paper. It is taught in every school and cited in every legal proceeding. It is the nominal reason the Halo Witness was commissioned.', universe: 'veiled-realm' },
+  { id: 'l3', term: 'The Hidden Blades', definition: 'Not soldiers. The most dangerous kind of resistance: people who write things down. A network of archivists, former Accord officials, and memory-carriers. Their weapon is the act of record-keeping in a world that makes record-keeping illegal.', universe: 'veiled-realm' },
+  { id: 'l4', term: 'The Dreadful Eye', definition: 'A genetic anomaly that lets its bearer see what the Accord has erased. It allows its bearer to perceive the negative space in the Accord\'s information architecture — the gaps where memories used to be before the Halo Witness removed them.', universe: 'veiled-realm' },
+  { id: 'l5', term: 'The Veil', definition: 'A membrane between truth and memory. Once stable. Now fractured. It is a condition — a state of equilibrium between the actual history of the Veiled Realm and the curated version the Accord distributes through the Belief Codex and the Halo Witness.', universe: 'veiled-realm' },
+  { id: 'l6', term: 'The Accord', definition: 'The governing body of the Veiled Realm. Operates through seven functional positions. Maintains power through forgetting, not force. Citizens of the Accord are not oppressed — they are comfortable, safe, and genuinely unaware that anything is missing.', universe: 'veiled-realm' },
+  { id: 'l7', term: 'Memory as Currency', definition: 'In the Veiled Realm, memory is not metaphorically valuable. It is literally tradeable. The Harmony Engine refines raw memories into transferable experience packets. The wealthy purchase other people\'s lives.', universe: 'veiled-realm' },
+  { id: 'l8', term: 'The Familiar System', definition: 'Bonded companions presented as protectors. Loyal to two masters simultaneously. They genuinely protect their charges. They also report everything to the Accord\'s monitoring architecture.', universe: 'veiled-realm' },
+  { id: 'l9', term: 'The Riftborn', definition: 'Creatures born from forgotten truths. Half thought, half reflection. They show you what you have tried to forget. They emerge at the points where the Veil is thinnest.', universe: 'veiled-realm' },
+  { id: 'l10', term: 'The Mirrorseed', definition: 'Not born of Earth. A witness left behind. When too many lies accumulate, it blooms — and what blooms cannot be un-seen. It is a failsafe: when the ratio of constructed narrative to actual history reaches a certain threshold, the Mirrorseed blooms.', universe: 'veiled-realm' },
+  { id: 'l11', term: 'The GRPI', definition: 'Governance Redundancy and Permanence Index. A framework designed to terminate its own authority. It measures the degree to which an administration has become incapable of meaningful self-reform.', universe: 'crimson-architect' },
+  { id: 'l12', term: 'Coherence Audit', definition: 'A mandatory review triggered when an administration operates under the GRPI for more than fourteen years. If the Coherence Index falls below the threshold, Managed Dissolution begins.', universe: 'crimson-architect' },
+  { id: 'l13', term: 'Managed Dissolution', definition: 'A structured transfer of authority that leaves governing functions intact while replacing every person who performs them. Triggered by a failed Coherence Audit.', universe: 'crimson-architect' }
 ];
 
 export const CHARACTERS: Character[] = [
-  { id: 'ch1', name: 'Kael Vevryn', role: 'The Marked', quote: "Once erased. Now the last thing the Accord can afford to remember.", books: "Veiled Realm Trilogy (All Three)", shortQuote: "Once erased from existence. Now marked by the Oath. Wields Veydran — a blade that hisses where it touches the ground. He has lived this cycle before. He does not remember how it ended. Holds memories the universe tried to forget, and will not put them down." },
-  { id: 'ch2', name: 'Lyra / Lyris', role: 'The Witness', quote: "Don't look at me like I'm disappearing.", books: "Veiled Realm Trilogy (All Three)", shortQuote: "The First Witness reborn. Host of the Shard of Eidryn. She sometimes leaves no footprints. Sometimes she leaves too many — as though fragments of past versions of her walk beside the real one. Split between who she was and who the Oath needs her to become. Holding on. Barely." },
-  { id: 'ch3', name: 'Nyra', role: 'The Shadow', quote: "She is what Kael refused to become. She is what he almost was.", books: "Veiled Realm Trilogy (Books II and III)", shortQuote: "Kael's shadow and his unchosen consequence. A fragment of the Veil given hunger and thought. She did not choose to exist. She did not choose to be what she is. She chose only one thing — and the trilogy turns on what that choice was." },
-  { id: 'ch4', name: 'Eryndor', role: 'The Architect', quote: "He knows the ending. He keeps it to himself. Every time.", books: "Veiled Realm Trilogy (All Three)", shortQuote: "Kael's former mentor — half flesh, half shadow. Bound to the Oath's awakening. Forgot three times. Returned every time. The only person in the trilogy who fully understands what the Eclipsed Oath is — and who has chosen, on each of his three returns, not to say." },
-  { id: 'ch5', name: 'Chloe Valcrest', role: 'The Anchor', quote: "She wasn't chosen. She chose.", books: "Veiled Realm — Book I", shortQuote: "Not the strongest. Not the fastest. Not the chosen one. But she believed — in him, in memory, in the fragile thing called truth. His last anchor to a world slipping away. She is the reason he became a mirror instead of a weapon. Whether that was the right outcome is a question the trilogy does not answer cleanly." },
-  { id: 'ch6', name: 'Elias Kaer', role: 'The Archivist', quote: "He worked for the system that erased people. Then he opened a file.", books: "Veiled Realm — Book II", shortQuote: "He worked for the system that erased people. He catalogued their memories. He filed their dreams. He made the forgetting efficient. Then one night, a file blinked red, and he opened it. That choice — ten seconds of curiosity against eleven years of complicity — is the axis on which Book II turns." },
+  { id: 'ch1', name: 'Kael Vevryn', role: 'The Marked', quote: "Once erased. Now the last thing the Accord can afford to remember.", bookId: 1, bookTitle: "Threads of the Forgotten", series: 'veiled-realm' },
+  { id: 'ch2', name: 'Lyra / Lyris', role: 'The Witness', quote: "Don't look at me like I'm disappearing.", bookId: 1, bookTitle: "Threads of the Forgotten", series: 'veiled-realm' },
+  { id: 'ch3', name: 'Nyra', role: 'The Shadow', quote: "She is what Kael refused to become. She is what he almost was.", bookId: 2, bookTitle: "Echoes of the Shattered Dawn", series: 'veiled-realm' },
+  { id: 'ch4', name: 'Eryndor', role: 'The Architect', quote: "He knows the ending. He keeps it to himself. Every time.", bookId: 2, bookTitle: "Echoes of the Shattered Dawn", series: 'veiled-realm' },
+  { id: 'ch5', name: 'Chloe Valcrest', role: 'The Anchor', quote: "She wasn't chosen. She chose.", bookId: 3, bookTitle: "The Eclipsed Oath", series: 'veiled-realm' },
+  { id: 'ch6', name: 'Elias Kaer', role: 'The Archivist', quote: "He worked for the system that erased people. Then he opened a file.", bookId: 3, bookTitle: "The Eclipsed Oath", series: 'veiled-realm' },
+  { id: 'ch7', name: 'Viktor', role: 'The Architect', quote: "Authority must expire. Responsibility must not.", bookId: 4, bookTitle: "The Crimson Architect", series: 'crimson-architect' },
+  { id: 'ch8', name: 'Lena', role: 'The Deputy', quote: "The neighbours are the ones who decide whether the building stands.", bookId: 4, bookTitle: "The Crimson Architect", series: 'crimson-architect' },
+  { id: 'ch9', name: 'Sorokin', role: 'The Observer', quote: "Do you actually believe it will work?", bookId: 4, bookTitle: "The Crimson Architect", series: 'crimson-architect' }
 ];
 
 export const DOWNLOADS: Download[] = [
