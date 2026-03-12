@@ -104,33 +104,33 @@ export const LoreSection: React.FC = () => {
         </div>
         
         <div className="space-y-4">
-          <div className={`flex flex-col md:flex-row flex-wrap w-full min-h-[400px] md:h-[500px] gap-2 p-2 bg-white/[0.02] border border-white/5 rounded-sm transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+          <div className={`flex flex-col md:flex-row w-full h-[700px] md:h-[600px] gap-1 md:gap-2 p-1 md:p-2 bg-white/[0.02] border border-white/5 rounded-sm transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
             {filteredLore.map((item) => (
               <div 
                 key={item.id}
-                className={`group flex-1 min-w-[250px] md:hover:flex-[4] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] cursor-pointer relative border bg-[#080508]/80 hover:bg-[#0c080c] overflow-hidden flex items-center justify-center p-6 ${activeUniverse === 'veiled-realm' ? 'border-crimson/10 hover:border-crimson/40' : 'border-blue-900/20 hover:border-blue-500/40'}`}
+                className={`group flex-1 hover:flex-[6] md:hover:flex-[8] min-h-0 min-w-0 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] cursor-pointer relative border bg-[#080508]/80 hover:bg-[#0c080c] overflow-hidden flex items-center justify-center ${activeUniverse === 'veiled-realm' ? 'border-crimson/10 hover:border-crimson/40' : 'border-blue-900/20 hover:border-blue-500/40'}`}
               >
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                   <span className="md:rotate-[-90deg] whitespace-nowrap transition-all duration-700 uppercase tracking-[0.4em] font-cinzel text-gray-500 group-hover:text-gold group-hover:opacity-0 group-hover:scale-150 text-sm md:text-lg">
+                   <span className="md:rotate-[-90deg] whitespace-nowrap transition-all duration-700 uppercase tracking-[0.2em] md:tracking-[0.4em] font-cinzel text-gray-500 group-hover:text-gold group-hover:opacity-0 group-hover:scale-150 text-xs md:text-lg">
                       {item.term}
                    </span>
                 </div>
                 <div className={`absolute inset-0 bg-gradient-to-b opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none ${activeUniverse === 'veiled-realm' ? 'from-crimson/10 to-transparent' : 'from-blue-900/20 to-transparent'}`} />
-                <div className="opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-150 transform translate-y-10 group-hover:translate-y-0 flex flex-col items-center text-center max-w-lg">
-                   <div className="mb-8 text-gold drop-shadow-[0_0_15px_rgba(202,138,4,0.4)]">
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 md:p-8 opacity-0 group-hover:opacity-100 transition-all duration-1000 delay-150 transform translate-y-10 group-hover:translate-y-0">
+                   <div className="mb-2 md:mb-6 text-gold drop-shadow-[0_0_15px_rgba(202,138,4,0.4)] scale-75 md:scale-100">
                       {getIcon(item.term)}
                    </div>
-                   <h3 className="text-2xl md:text-4xl font-cinzel text-white mb-6 tracking-widest">{item.term}</h3>
-                   <div className={`w-12 h-[1px] mb-8 ${activeUniverse === 'veiled-realm' ? 'bg-crimson/50' : 'bg-blue-500/50'}`} />
-                   <div className="h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-700 delay-100 overflow-hidden">
-                     <p className="text-gray-200 font-reading text-sm md:text-base leading-relaxed italic px-4">
+                   <h3 className="text-xl md:text-4xl font-cinzel text-white mb-2 md:mb-6 tracking-widest">{item.term}</h3>
+                   <div className={`w-8 md:w-12 h-[1px] mb-2 md:mb-6 ${activeUniverse === 'veiled-realm' ? 'bg-crimson/50' : 'bg-blue-500/50'}`} />
+                   <div className="max-h-0 opacity-0 group-hover:max-h-[500px] group-hover:opacity-100 transition-all duration-700 delay-100 overflow-hidden">
+                     <p className="text-gray-200 font-reading text-xs md:text-base leading-relaxed italic px-2 md:px-4 line-clamp-4 md:line-clamp-none">
                         {item.definition}
                      </p>
                    </div>
-                   <div className={`mt-12 w-2 h-2 rotate-45 ${activeUniverse === 'veiled-realm' ? 'bg-crimson shadow-[0_0_10px_#991b1b]' : 'bg-blue-500 shadow-[0_0_10px_#3b82f6]'}`} />
+                   <div className={`mt-4 md:mt-12 w-2 h-2 rotate-45 ${activeUniverse === 'veiled-realm' ? 'bg-crimson shadow-[0_0_10px_#991b1b]' : 'bg-blue-500 shadow-[0_0_10px_#3b82f6]'}`} />
                 </div>
-                <div className="absolute top-4 right-4 w-4 h-4 border-t border-r border-white/10 group-hover:border-gold/50 transition-all duration-500" />
-                <div className="absolute bottom-4 left-4 w-4 h-4 border-b border-l border-white/10 group-hover:border-gold/50 transition-all duration-500" />
+                <div className="absolute top-2 right-2 md:top-4 md:right-4 w-3 h-3 md:w-4 md:h-4 border-t border-r border-white/10 group-hover:border-gold/50 transition-all duration-500" />
+                <div className="absolute bottom-2 left-2 md:bottom-4 md:left-4 w-3 h-3 md:w-4 md:h-4 border-b border-l border-white/10 group-hover:border-gold/50 transition-all duration-500" />
               </div>
             ))}
           </div>
