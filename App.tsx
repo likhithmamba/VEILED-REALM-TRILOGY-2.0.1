@@ -135,9 +135,9 @@ export default function App() {
       <MouseTrail />
       <StickyNav />
       <ScrollToTopRune />
+      <Hero startAnimations={introFinished} />
 
       <div className="relative z-10">
-        <Hero startAnimations={introFinished} />
         <MysticalDivider />
 
         <div id="about">

@@ -292,29 +292,6 @@ export const VaultSection: React.FC<VaultSectionProps> = ({ onOpenStarterPack })
                />
              </div>
 
-             <div className="grid grid-cols-2 gap-4">
-                {DOWNLOADS.filter(d => !d.title.includes('Free Sample')).map((item, idx) => (
-                   <div key={item.id} className="group relative border border-white/10 bg-white/[0.02] overflow-hidden rounded-sm cursor-pointer h-32 hover:border-yellow-600/30 transition-all">
-                      <div className={`absolute inset-0 bg-gradient-to-br ${idx === 0 ? 'from-red-900/20 to-black' : 'from-blue-900/20 to-black'} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-                      
-                      <div className="absolute inset-0 p-4 flex flex-col justify-between z-10">
-                         <div className="flex justify-between items-start">
-                            {idx === 0 ? <Image className="w-4 h-4 text-gray-400 group-hover:text-white" /> : <Monitor className="w-4 h-4 text-gray-400 group-hover:text-white" />}
-                            <span className="text-[9px] font-mono text-red-500 border border-red-900/30 px-1 py-0.5 rounded bg-black/50 font-bold">
-                               {item.type.includes('4K') ? '4K' : 'HD'}
-                            </span>
-                         </div>
-                         <div>
-                            <span className="text-gray-200 font-cinzel text-[10px] group-hover:text-yellow-400 transition-colors block mb-1 font-bold">
-                               {item.title.replace('Wallpaper Pack ', '')}
-                            </span>
-                            <span className="text-[9px] text-gray-500 font-mono block">{item.size}</span>
-                         </div>
-                      </div>
-                   </div>
-                ))}
-             </div>
-
           </div>
 
         </div>
